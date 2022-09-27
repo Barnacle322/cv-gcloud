@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/home.css') }}">
+    <script src="{{ url_for('static',filename='scripts/home.js') }}" defer></script>
+
+    <!-- <link rel="stylesheet" href="./home.css"> -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static',filename='elements/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',filename='elements/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static',filename='elements/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static',filename='elements/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ url_for('static',filename='elements/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#303134">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Primary Meta Tags -->
+    <title>Усенов Арстанбек // Разработчик</title>
+    <meta name="title" content="Усенов Арстанбек // Разработчик">
+    <meta name="description" content="Здесь вы можете найти резюме Арстанбека">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arstan.page/ru">
+    <meta property="og:title" content="Усенов Арстанбек // Разработчик">
+    <meta property="og:description" content="Здесь вы можете найти резюме Арстанбека">
+    <meta property="og:image" content="https://arstan.page/static/elements/cvphoto.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://arstan.page/ru">
+    <meta property="twitter:title" content="Усенов Арстанбек // Разработчик">
+    <meta property="twitter:description" content="Здесь вы можете найти резюме Арстанбека">
+    <meta property="twitter:image" content="https://arstan.page/static/elements/cvphoto.jpg">
+</head>
+<body class="body">
+    <div class="cv">
+        <div class="side">
+            <input type="checkbox" id="switch-button" onclick="myFunction()">
+            <div class='langs'>
+                <a class='langswitch' href="/ru">RU</a>
+                <a class='langswitch' href="/en">EN</a>
+                <label for="switch-button" id="label">
+                    <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"> </object>
+                    <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"> </object>
+                </label>
+            </div>
+            
+            <div class="picture">
+                <img id='img' src="{{ url_for('static',filename='/elements/pfp.jpg') }}" alt="myPicture">
+            </div>
+            <div class="name ">Арстанбек Усенов</div>
+            <div class="location">Кыргызстан, Бишкек</div>
+            <div class="linedivider"></div>
+            <div class="contactinfo">
+                <div class="contactinfo-title">
+                    Контакты
+                </div>
+                <div class="contact">
+                    <div class="contact-icon">
+                        <object data="{{ url_for('static',filename='elements/mail.svg') }}" width="24" height="24"> </object>
+                    </div>
+
+                    <div class="contact-text">
+                        arstan.usenov@gmail.com
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="contact-icon" style="transform: scale(1.05); margin-bottom: 5px;">
+                        <object data="{{ url_for('static',filename='elements/phone.svg') }}" width="24" height="24"> </object>
+                    </div>
+                    <div class="contact-text">
+                        +996 555 25 00 66
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="contact-icon" style="transform: scale(0.85); margin-bottom: 5px">
+                        <object data="{{ url_for('static',filename='elements/linkedin.svg') }}" width="24" height="24"> </object>
+                    </div>
+                    <div class="contact-text">
+                        <a class="contact-href" href="https://www.linkedin.com/in/arstan-usenov-a68a78225/">Перейти в LinkedIn</a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="contact-icon">
+                        <object data="{{ url_for('static',filename='elements/telegram.svg') }}" width="24" height="24"> </object>
+                    </div>
+                    <div class="contact-text">
+                        <a class="contact-href" href="https://t.me/Barnacle/">Перейти в Telegram</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="linedivider"></div>
+            
+            <div class="education-info">
+                <div class="education-title">Образование</div>
+                <div class="education">
+                    <div class="education-year">Сентябрь 2021 - Июль 2022</div>
+                    <div class="education-program">Engineering Stream</div>
+                    <div class="education-place">Twente Pathway College, NL</div>
+                </div>
+                <div class="education">
+                    <div class="education-year">Октябрь 2019 - Июнь 2020</div>
+                    <div class="education-program">Java Backend Course</div>
+                    <div class="education-place">IT-Academy, KG</div>
+                </div>
+                <div class="education">
+                    <div class="education-year">Май 2019 - Июль 2019</div>
+                    <div class="education-program">Python Core Course</div>
+                    <div class="education-place">IT-Academy, KG</div>
+                </div>
+            </div>
+
+            <div class="linedivider"></div>
+
+            <div class="language-info">
+                <div class="language-title">Языки</div>
+                <div class="language">
+                    <div class="language-name">Английский</div>
+                    <div class="language-level">Advanced(C1) - IELTS 8.0</div>
+                </div>
+                <div class="language ">
+                    <div class="language-name">Русский</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="omitter">
+            <div class="linedivider"></div>
+        </div>
+        <input type="checkbox" id="switch-button2" onclick="myFunction()">
+        <div class="main">
+            <label for="switch-button2" id="label2">
+                <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"> </object>
+                <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"> </object>
+            </label>
+            <div class="skills">
+                <div class="skills-title">Навыки</div>
+
+                <div class="skill">
+                    <div class="skill-category">Языки Программирования</div>
+                    <div class="skill-description">Python, SQL, Java, HTML, CSS, JavaScript</div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-category">Фреймворки и Библиотеки</div>
+                    <div class="skill-description">Flask, FastAPI, Django, asyncio, asyncpg, Black, Python-Telegram-Bot, peewee, SQLAlchemy, Spring Boot</div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-category">Утилиты</div>
+                    <div class="skill-description">Git, pgModeler, Google Cloud, Heroku, Postman, PostgreSQL, SQLite, DBeaver, pgAdmin</div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-category">Креатив</div>
+                    <div class="skill-description">Adobe Premiere Pro, Adobe Photoshop, Adobe Lightroom, Adobe Audition, Canva </div>
+                </div>
+            </div>
+            <div class="linedivider"></div>
+            <div class="experiences">
+                <div class="experiences-title">Опыт</div>
+                <div class="experience">
+                    <div class="experience-position">
+                        <div style="margin-right: 5px;">Teacher</div> 
+                        <span>@ Bilimkana-Bishkek</span>
+                    </div>
+                    <div class="experience-year">Сентябрь 2022 - Настоящее время // Кыргызстан</div>
+                    <div class="experience-description">- Обучать учеников фундаментальными и более продвинутыми концептам программирования в области веб-разработки.</div>
+                    <div class="experience-description">- Придумать вовлекающий и продуктивный учебный план.</div>
+                    <div class="experience-description">- Периодично оценивать студентов и изменять матрицу обучения соответственно.</div>
+                </div>
+                <div class="experience">
+                    <div class="experience-position">
+                        <div>Python Developer</div> 
+                        <span>@ DevelopsToday</span>
+                    </div>
+                    <div class="experience-year">Август 2022 - Настоящее время // Украина (Удаленно)</div>
+                    <div class="experience-description">- Писать асинхронный и надежный код для назначенного проекта. Вносить необходимые изменения в БД и брокеры сообщений.</div>
+                    <div class="experience-description">- Кратко описывать, как прошел рабочий день во время стендап-сессий.</div>
+                    <div class="experience-description">- Обновлять и поддерживать список задач в практичной маннере.</div>
+                </div>
+                <div class="experience">
+                    <div class="experience-position">
+                        <div>Разработчик</div>
+                        <span style="color: #969ba1"> @ ESO Association</span>
+                    </div>
+                    <div class="experience-year">Октябрь 2021 - Настоящее время // Нидерланды</div>
+                    <div class="experience-description">- Написание лаконичного и читаемого кода для использования внутри и вне ассоциации</div>
+                    <div class="experience-description">- Ежедневная коммуникация между другими комитетами ассоциации для лучшей разработки продуктов.</div>
+                    <div class="experience-description">- Постоянная работа над новыми идеями во благо ассоциации.</div>
+                </div>
+            </div>
+            <div class="linedivider"></div>
+            <div class="projects">
+                <div class="projects-title">Проекты</div>
+                <div class="project">
+                    <div class="project-name">
+                        Система Менджмента Бюджета Общежитий
+                    </div>
+                    <div class="project-description">Веб приложение созданное <span style="font-weight: 700">Flask</span> и <span style="font-weight: 700">PostgreSQL</span> для учеты бюджета жителей общежития.</div>
+                </div>
+                <div class="project">
+                    <div class="project-name">
+                        Система Регистраций на Ивенты
+                    </div>
+                    <div class="project-description">CRM система для легкого менеджмента ивентов. Сделана с помощью <span style="font-weight: 700">Django</span> and <span style="font-weight: 700">Python-Telegram-Bot</span> и имеет веб интерфейс и доступ через телеграм бота.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display:block; position:relative; width:100%; height: 1px;"></div>
+</body>
+</html>

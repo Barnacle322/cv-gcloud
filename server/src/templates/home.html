@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/home.css') }}">
+    <script src="{{ url_for('static',filename='scripts/home.js') }}" defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static',filename='elements/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',filename='elements/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static',filename='elements/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static',filename='elements/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ url_for('static',filename='elements/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#303134">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- <link rel="stylesheet" href="./home.css"> -->
+
+    <title>Arstanbek Usenov // Software Developer</title>
+    <meta name="title" content="Arstanbek Usenov // Software Developer">
+    <meta name="description" content="Here you can find Arstanbek's CV">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arstan.page/en">
+    <meta property="og:title" content="Arstanbek Usenov // Software Developer">
+    <meta property="og:description" content="Here you can find Arstanbek's CV">
+    <meta property="og:image" content="https://arstan.page/static/elements/cvphoto.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://arstan.page/en">
+    <meta property="twitter:title" content="Arstanbek Usenov // Software Developer">
+    <meta property="twitter:description" content="Here you can find Arstanbek's CV">
+    <meta property="twitter:image" content="https://arstan.page/static/elements/cvphoto.jpg">
+</head>
+<body class="body">
+    <div class="cv">
+        <div class="side">
+            <input type="checkbox" id="switch-button" onclick="myFunction()">
+            <div class='langs'>
+                <a class='langswitch' href="/ru">RU</a>
+                <a class='langswitch' href="/en">EN</a>
+                <label for="switch-button" id="label">
+                    <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"> </object>
+                    <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"> </object>
+                </label>
+            </div>
+        
+            
+            <div class="picture">
+                <img id='img' src="{{ url_for('static',filename='/elements/pfp.jpg') }}" alt="myPicture">
+            </div>
+            <div class="name">Arstanbek Usenov</div>
+            <div class="location">Bishkek, Kyrgyzstan</div>
+            <div class="linedivider"></div>
+            <div class="contactinfo">
+                <div class="contactinfo-title">
+                    Contact Info
+                </div>
+                <div class="contact">
+                    <div class="contact-icon">
+                        <!-- <i class="envelope outline icon" style="margin-bottom: 5px;"></i> -->
+                        <object data="{{ url_for('static',filename='elements/mail.svg') }}" width="24" height="24"> </object>
+                    </div>
+
+                    <div class="contact-text">
+                        arstan.usenov@gmail.com
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="contact-icon" style="transform: scale(1.05); margin-bottom: 5px;">
+                        <object data="{{ url_for('static',filename='elements/phone.svg') }}" width="24" height="24"> </object>
+                    </div>
+                    <div class="contact-text">
+                        +996 555 25 00 66
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="contact-icon" style="transform: scale(0.85); margin-bottom: 5px">
+                        <object data="{{ url_for('static',filename='elements/linkedin.svg') }}" width="24" height="24"> </object>
+                    </div>
+                    <div class="contact-text">
+                        <a class="contact-href" href="https://www.linkedin.com/in/arstan-usenov-a68a78225/">Go to LinkedIn </a>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="contact-icon">
+                        <object data="{{ url_for('static',filename='elements/telegram.svg') }}" width="24" height="24"> </object>
+                    </div>
+                    <div class="contact-text">
+                        <a class="contact-href" href="https://t.me/Barnacle/">Go to Telegram </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="linedivider"></div>
+            
+            <div class="education-info">
+                <div class="education-title">Education</div>
+                <div class="education">
+                    <div class="education-year">Sep 2021 - Jul 2022</div>
+                    <div class="education-program">Engineering Stream</div>
+                    <div class="education-place">Twente Pathway College, NL</div>
+                </div>
+                <div class="education">
+                    <div class="education-year">Oct 2019 - Jun 2020</div>
+                    <div class="education-program">Java Backend Course</div>
+                    <div class="education-place">IT-Academy, KG</div>
+                </div>
+                <div class="education">
+                    <div class="education-year">May 2019 - Jul 2019</div>
+                    <div class="education-program">Python Core Course</div>
+                    <div class="education-place">IT-Academy, KG</div>
+                </div>
+            </div>
+
+            <div class="linedivider"></div>
+
+            <div class="language-info">
+                <div class="language-title">Languages</div>
+                <div class="language">
+                    <div class="language-name">English</div>
+                    <div class="language-level">Advanced(C1) - IELTS 8.0</div>
+                </div>
+                <div class="language">
+                    <div class="language-name">Russian</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="omitter">
+            <div class="linedivider"></div>
+        </div>
+        <input type="checkbox" id="switch-button2" onclick="myFunction()">
+        <div class="main">
+            <label for="switch-button2" id="label2">
+                <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"> </object>
+                <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"> </object>
+            </label>
+            <div class="skills">
+                <div class="skills-title">Skills</div>
+
+                <div class="skill">
+                    <div class="skill-category">Programming Languages</div>
+                    <div class="skill-description">Python, SQL, Java, HTML, CSS, JavaScript</div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-category">Frameworks and Libraries</div>
+                    <div class="skill-description">Flask, FastAPI, Django, asyncio, asyncpg, Black, Python-Telegram-Bot, peewee, SQLAlchemy, Spring Boot</div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-category">Tools</div>
+                    <div class="skill-description">Git, pgModeler, Google Cloud, Heroku, Postman, PostgreSQL, SQLite, DBeaver, pgAdmin</div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-category">Creative</div>
+                    <div class="skill-description">Adobe Premiere Pro, Adobe Photoshop, Adobe Lightroom, Adobe Audition, Canva </div>
+                </div>
+            </div>
+            <div class="linedivider"></div>
+            <div class="experiences">
+                <div class="experiences-title">Experience</div>
+                <div class="experience">
+                    <div class="experience-position">
+                        <div>Teacher</div> 
+                        <span>@ Bilimkana-Bishkek</span>
+                    </div>
+                    <div class="experience-year">Sep 2022 - Present // Kyrgyzstan</div>
+                    <div class="experience-description">- Teach students basic and more advanced programming concepts in the field of web development.</div>
+                    <div class="experience-description">- Come up with engaging and productive study syllabus.</div>
+                    <div class="experience-description">- Periodically assess students and change the study matrix accordingly.</div>
+                </div>
+                <div class="experience">
+                    <div class="experience-position">
+                        <div>Python Developer</div> 
+                        <span>@ DevelopsToday</span>
+                    </div>
+                    <div class="experience-year">Aug 2022 - Present // Ukraine (Remote)</div>
+                    <div class="experience-description">- Write asynchronous and reliable code for the assigned project. Make necessary changes to DBs and message brokers.</div>
+                    <div class="experience-description">- Concisely describe how the working day went during stand-up sessions.</div>
+                    <div class="experience-description">- Update and maintain the list of tasks in a practical manner.</div>
+                </div>
+                <div class="experience">
+                    <div class="experience-position">
+                        <div>Software Engineer</div> 
+                        <span>@ ESO Association</span>
+                    </div>
+                    <div class="experience-year">Oct 2021 - Present // The Netherlands</div>
+                    <div class="experience-description">- Write concise and readable code for numerous systems for both internal and external use.</div>
+                    <div class="experience-description">- Daily communcation with other association's committees for a better product development.</div>
+                    <div class="experience-description">- Come up with new and progressive ideas beneficial for the association.</div>
+                </div>
+            </div>
+            <div class="linedivider"></div>
+            <div class="projects">
+                <div class="projects-title">Projects</div>
+                <div class="project">
+                    <div class="project-name">
+                        Student House Grocery Management System
+                    </div>
+                    <div class="project-description">A web app built with <span style="font-weight: 700">Flask</span> and <span style="font-weight: 700">PostgreSQL</span> for keeping track of the budget in a student house.</div>
+                </div>
+                <div class="project">
+                    <div class="project-name">
+                        Event Registration System
+                    </div>
+                    <div class="project-description">A CRM system for an easy event registation and creation. It's built with <span style="font-weight: 700">Django</span> and <span style="font-weight: 700">Python-Telegram-Bot</span> and features interfaces through a web view and a telegram bot.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display:block; position:relative; width:100%; height: 1px;"></div>
+</body>
+</html>
