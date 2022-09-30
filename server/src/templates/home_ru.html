@@ -44,7 +44,7 @@
             <input type="checkbox" id="switch-button" onclick="myFunction()">
             <div class='langs'>
                 <a class='langswitch' href="/ru">RU</a>
-                <a class='langswitch' href="/en">EN</a>
+                <a class='langswitch' href="/">EN</a>
                 <label for="switch-button" id="label">
                     <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"> </object>
                     <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"> </object>
@@ -66,33 +66,33 @@
                         <object data="{{ url_for('static',filename='elements/mail.svg') }}" width="24" height="24"> </object>
                     </div>
 
-                    <div class="contact-text">
+                    <a class="contact-href contact-text" href="mailto:arstan.usenov@gmail.com">
                         arstan.usenov@gmail.com
-                    </div>
+                    </a>
                 </div>
                 <div class="contact">
                     <div class="contact-icon" style="transform: scale(1.05); margin-bottom: 5px;">
                         <object data="{{ url_for('static',filename='elements/phone.svg') }}" width="24" height="24"> </object>
                     </div>
-                    <div class="contact-text">
+                    <a class="contact-text contact-href" href="tel:+996555250066">
                         +996 555 25 00 66
-                    </div>
+                    </a>
                 </div>
                 <div class="contact">
                     <div class="contact-icon" style="transform: scale(0.85); margin-bottom: 5px">
                         <object data="{{ url_for('static',filename='elements/linkedin.svg') }}" width="24" height="24"> </object>
                     </div>
-                    <div class="contact-text">
-                        <a class="contact-href" href="https://www.linkedin.com/in/arstan-usenov-a68a78225/">Перейти в LinkedIn</a>
-                    </div>
+                    <a class="contact-text contact-href" href="https://www.linkedin.com/in/arstan-usenov-a68a78225/">
+                        Открыть в LinkedIn
+                    </a>
                 </div>
                 <div class="contact">
                     <div class="contact-icon">
                         <object data="{{ url_for('static',filename='elements/telegram.svg') }}" width="24" height="24"> </object>
                     </div>
-                    <div class="contact-text">
-                        <a class="contact-href" href="https://t.me/Barnacle/">Перейти в Telegram</a>
-                    </div>
+                    <a class="contact-text contact-href" href="https://t.me/Barnacle/">
+                        Написать в Telegram
+                    </a>
                 </div>
 
             </div>
@@ -169,20 +169,31 @@
                 <div class="experiences-title">Опыт</div>
                 <div class="experience">
                     <div class="experience-position">
-                        <div style="margin-right: 5px;">Teacher</div> 
+                        <div style="margin-right: 5px;">Преподаватель</div> 
                         <span>@ Bilimkana-Bishkek</span>
                     </div>
-                    <div class="experience-year">Сентябрь 2022 - Настоящее время // Кыргызстан</div>
+                    <div class="experience-year">
+                        Сентябрь 2022 - Настоящее время 
+                        <span style="color:#969ba1">
+                            ({{ dates["bilimkana"] }})
+                        </span> 
+                        // Кыргызстан</div>
                     <div class="experience-description">- Обучать учеников фундаментальными и более продвинутыми концептам программирования в области веб-разработки.</div>
                     <div class="experience-description">- Придумать вовлекающий и продуктивный учебный план.</div>
                     <div class="experience-description">- Периодично оценивать студентов и изменять матрицу обучения соответственно.</div>
                 </div>
                 <div class="experience">
                     <div class="experience-position">
-                        <div>Python Developer</div> 
+                        <div>Питон Разработчик</div> 
                         <span>@ DevelopsToday</span>
                     </div>
-                    <div class="experience-year">Август 2022 - Настоящее время // Украина (Удаленно)</div>
+                    <div class="experience-year">
+                        Август 2022 - Настоящее время 
+                        <span style="color:#969ba1">
+                            ({{ dates["developstoday"] }})
+                        </span> 
+                        // Украина (Удаленно)
+                    </div>
                     <div class="experience-description">- Писать асинхронный и надежный код для назначенного проекта. Вносить необходимые изменения в БД и брокеры сообщений.</div>
                     <div class="experience-description">- Кратко описывать, как прошел рабочий день во время стендап-сессий.</div>
                     <div class="experience-description">- Обновлять и поддерживать список задач в практичной маннере.</div>
@@ -192,7 +203,13 @@
                         <div>Разработчик</div>
                         <span style="color: #969ba1"> @ ESO Association</span>
                     </div>
-                    <div class="experience-year">Октябрь 2021 - Настоящее время // Нидерланды</div>
+                    <div class="experience-year">
+                        Октябрь 2021 - Настоящее время 
+                        <span style="color:#969ba1">
+                            ({{ dates["eso"] }})
+                        </span> 
+                        // Нидерланды
+                    </div>
                     <div class="experience-description">- Написание лаконичного и читаемого кода для использования внутри и вне ассоциации</div>
                     <div class="experience-description">- Ежедневная коммуникация между другими комитетами ассоциации для лучшей разработки продуктов.</div>
                     <div class="experience-description">- Постоянная работа над новыми идеями во благо ассоциации.</div>

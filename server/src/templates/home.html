@@ -24,14 +24,14 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://arstan.page/en">
+    <meta property="og:url" content="https://arstan.page">
     <meta property="og:title" content="Arstanbek Usenov // Software Developer">
     <meta property="og:description" content="Here you can find Arstanbek's CV">
     <meta property="og:image" content="https://arstan.page/static/elements/cvphoto.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://arstan.page/en">
+    <meta property="twitter:url" content="https://arstan.page">
     <meta property="twitter:title" content="Arstanbek Usenov // Software Developer">
     <meta property="twitter:description" content="Here you can find Arstanbek's CV">
     <meta property="twitter:image" content="https://arstan.page/static/elements/cvphoto.jpg">
@@ -42,7 +42,7 @@
             <input type="checkbox" id="switch-button" onclick="myFunction()">
             <div class='langs'>
                 <a class='langswitch' href="/ru">RU</a>
-                <a class='langswitch' href="/en">EN</a>
+                <a class='langswitch' href="/">EN</a>
                 <label for="switch-button" id="label">
                     <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"> </object>
                     <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"> </object>
@@ -66,33 +66,31 @@
                         <object data="{{ url_for('static',filename='elements/mail.svg') }}" width="24" height="24"> </object>
                     </div>
 
-                    <div class="contact-text">
+                    <a href="mailto:arstan.usenov@gmail.com" class="contact-href contact-text">
                         arstan.usenov@gmail.com
-                    </div>
+                    </a>
                 </div>
                 <div class="contact">
                     <div class="contact-icon" style="transform: scale(1.05); margin-bottom: 5px;">
                         <object data="{{ url_for('static',filename='elements/phone.svg') }}" width="24" height="24"> </object>
                     </div>
-                    <div class="contact-text">
+                    <a href="tel:+996555250066" class="contact-href contact-text">
                         +996 555 25 00 66
-                    </div>
+                    </a>
                 </div>
                 <div class="contact">
                     <div class="contact-icon" style="transform: scale(0.85); margin-bottom: 5px">
                         <object data="{{ url_for('static',filename='elements/linkedin.svg') }}" width="24" height="24"> </object>
                     </div>
-                    <div class="contact-text">
-                        <a class="contact-href" href="https://www.linkedin.com/in/arstan-usenov-a68a78225/">Go to LinkedIn </a>
-                    </div>
+                    <a class="contact-href contact-text" href="https://www.linkedin.com/in/arstan-usenov-a68a78225/">
+                        Open in LinkedIn
+                    </a>
                 </div>
                 <div class="contact">
                     <div class="contact-icon">
                         <object data="{{ url_for('static',filename='elements/telegram.svg') }}" width="24" height="24"> </object>
                     </div>
-                    <div class="contact-text">
-                        <a class="contact-href" href="https://t.me/Barnacle/">Go to Telegram </a>
-                    </div>
+                    <a class="contact-href contact-text" href="https://t.me/Barnacle/">Message on Telegram </a>
                 </div>
             </div>
             
@@ -171,7 +169,13 @@
                         <div>Teacher</div> 
                         <span>@ Bilimkana-Bishkek</span>
                     </div>
-                    <div class="experience-year">Sep 2022 - Present // Kyrgyzstan</div>
+                    <div class="experience-year">
+                        Sep 2022 - Present 
+                        <span style="color:#969ba1">
+                            ({{ dates["bilimkana"] }} days)
+                        </span> 
+                        // Kyrgyzstan
+                    </div>
                     <div class="experience-description">- Teach students basic and more advanced programming concepts in the field of web development.</div>
                     <div class="experience-description">- Come up with engaging and productive study syllabus.</div>
                     <div class="experience-description">- Periodically assess students and change the study matrix accordingly.</div>
@@ -181,7 +185,13 @@
                         <div>Python Developer</div> 
                         <span>@ DevelopsToday</span>
                     </div>
-                    <div class="experience-year">Aug 2022 - Present // Ukraine (Remote)</div>
+                    <div class="experience-year">
+                        Aug 2022 - Present 
+                        <span style="color:#969ba1">
+                            ({{ dates["developstoday"] }} days)
+                        </span> 
+                        // Ukraine (Remote)
+                    </div>
                     <div class="experience-description">- Write asynchronous and reliable code for the assigned project. Make necessary changes to DBs and message brokers.</div>
                     <div class="experience-description">- Concisely describe how the working day went during stand-up sessions.</div>
                     <div class="experience-description">- Update and maintain the list of tasks in a practical manner.</div>
@@ -191,7 +201,13 @@
                         <div>Software Engineer</div> 
                         <span>@ ESO Association</span>
                     </div>
-                    <div class="experience-year">Oct 2021 - Present // The Netherlands</div>
+                    <div class="experience-year">
+                        Oct 2021 - Present 
+                        <span style="color:#969ba1">
+                            ({{ dates["eso"] }} days)
+                        </span> 
+                        // The Netherlands
+                    </div>
                     <div class="experience-description">- Write concise and readable code for numerous systems for both internal and external use.</div>
                     <div class="experience-description">- Daily communcation with other association's committees for a better product development.</div>
                     <div class="experience-description">- Come up with new and progressive ideas beneficial for the association.</div>
@@ -215,6 +231,5 @@
             </div>
         </div>
     </div>
-    <div style="display:block; position:relative; width:100%; height: 1px;"></div>
 </body>
 </html>
