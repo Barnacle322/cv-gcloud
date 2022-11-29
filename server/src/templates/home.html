@@ -43,6 +43,11 @@
             <div class='langs'>
                 <a class='langswitch' href="/ru">RU</a>
                 <a class='langswitch' href="/">EN</a>
+                <a href="/download" class="download2">
+                    <div style="pointer-events: none;">
+                        <object data="{{ url_for('static',filename='elements/download.svg') }}" width="40" height="40"></object>
+                    </div>
+                </a>
                 <label for="switch-button" id="label">
                     <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"> </object>
                     <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"> </object>
@@ -134,10 +139,17 @@
         </div>
         <input type="checkbox" id="switch-button2" onclick="myFunction()">
         <div class="main">
-            <label for="switch-button2" id="label2">
-                <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"> </object>
-                <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"> </object>
-            </label>
+            <div class="buttons">
+                <a href="/download" class="download">
+                    <div style="pointer-events: none;">
+                        <object data="{{ url_for('static',filename='elements/download.svg') }}" width="40" height="40"></object>
+                    </div>
+                </a>
+                <label for="switch-button2" id="label2">
+                    <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"></object>
+                    <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"></object>
+                </label>
+            </div>
             <div class="skills">
                 <div class="skills-title">Skills</div>
 

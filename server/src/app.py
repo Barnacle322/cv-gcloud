@@ -1,8 +1,9 @@
-from flask import Flask, render_template
-import os
 import datetime
 
+from flask import Flask, render_template, send_file
+
 app = Flask(__name__)
+
 
 def get_dates():
     today = datetime.date.today()
@@ -15,6 +16,7 @@ def get_dates():
         "eso": eso,
     }
     return dates
+
 
 def get_dates_ru():
     today = datetime.date.today()
@@ -35,7 +37,7 @@ def get_dates_ru():
             dates[key] = str(date) + " дня"
         else:
             dates[key] = str(date) + " дней"
-    
+
     return dates
 
 
@@ -44,10 +46,11 @@ def home():
     return render_template("home.html", dates=get_dates())
 
 
-@app.get('/ru')
+@app.get("/ru")
 def ru():
     return render_template("home_ru.html", dates=get_dates_ru())
 
 
-if __name__ == "__main__":
-    app.run(debug = True)#, host='0.0.0.0', port = int(os.environ.get('PORT', 8080)))
+@app.get("/download")
+def download():
+    return send_file("./static/elements/cvexport.pdf", as_attachment=True)
