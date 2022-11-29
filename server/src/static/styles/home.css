@@ -30,6 +30,7 @@
   --main-font-dark: #e8eaed;
   --secondary-font-dark: #969ba1;
 }
+
 body {
   margin: 0px;
   background-color: var(--main-bg-dark);
@@ -168,26 +169,6 @@ body {
   transition: 0.3s;
   pointer-events: none;
   user-select: none;
-}
-
-#switch-button:checked ~ .langs > label > #sun {
-  opacity: 1;
-  transform: none;
-}
-
-#switch-button:checked ~ .langs > label > #moon {
-  opacity: 0;
-  transform: none;
-}
-
-#switch-button2:checked ~ .main > label > #sun {
-  opacity: 1;
-  transform: none;
-}
-
-#switch-button2:checked ~ .main > label > #moon {
-  opacity: 0;
-  transform: none;
 }
 
 .langswitch {
@@ -492,11 +473,11 @@ body {
   display: flex;
 }
 
-.experience-position > span {
+.experience-position>span {
   color: var(--secondary-font-dark);
 }
 
-.experience-position > div {
+.experience-position>div {
   font-weight: bold;
   margin-right: 5px;
 }
@@ -542,6 +523,7 @@ body {
   .skills {
     margin-top: 0px;
   }
+
   .cv {
     flex-direction: column;
     height: fit-content;
@@ -549,14 +531,17 @@ body {
     min-width: 289px;
     margin: 50px;
   }
+
   .side {
     width: 100%;
     height: fit-content;
   }
+
   .main {
     width: 100%;
     height: fit-content;
   }
+
   .omitter {
     opacity: 1;
   }
