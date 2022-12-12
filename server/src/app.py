@@ -53,4 +53,4 @@ def ru():
 
 @app.get("/download")
 def download():
-    return send_file("./static/elements/cvexport.pdf", as_attachment=True)
+    return send_file("./static/elements/Arstanbek_Usenov_CV.pdf", as_attachment=True)
