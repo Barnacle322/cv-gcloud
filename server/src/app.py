@@ -8,7 +8,7 @@ app = Flask(__name__)
 def get_dates():
     today = datetime.date.today()
     bilimkana = (today - datetime.date(2022, 9, 1)).days
-    developstoday = (today - datetime.date(2022, 8, 8)).days
+    developstoday = (today - datetime.date(2022, 6, 8)).days
     eso = (today - datetime.date(2021, 9, 14)).days
     dates = {
         "bilimkana": bilimkana,
