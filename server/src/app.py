@@ -7,28 +7,36 @@ app = Flask(__name__)
 
 def get_dates():
     today = datetime.date.today()
-    bilimkana = (today - datetime.date(2022, 9, 1)).days
+    bilimkana = (datetime.date(2023, 6, 1) - datetime.date(2022, 9, 1)).days
     developstoday = (datetime.date(2023, 2, 1) - datetime.date(2022, 8, 8)).days
     eso = (datetime.date(2022, 8, 8) - datetime.date(2021, 9, 14)).days
-    
+    cec = (datetime.date(2023, 7, 1) - datetime.date(2023, 3, 1)).days
+    globalify = (today - datetime.date(2023, 6, 1)).days
+
     dates = {
         "bilimkana": bilimkana,
         "developstoday": developstoday,
         "eso": eso,
+        "cec": cec,
+        "globalify": globalify
     }
     return dates
 
 
 def get_dates_ru():
     today = datetime.date.today()
-    bilimkana = (today - datetime.date(2022, 9, 1)).days
+    bilimkana = (datetime.date(2023, 6, 1) - datetime.date(2022, 9, 1)).days
     developstoday = (datetime.date(2023, 2, 1) - datetime.date(2022, 8, 8)).days
     eso = (datetime.date(2022, 8, 8) - datetime.date(2021, 9, 14)).days
+    cec = (datetime.date(2023, 7, 1) - datetime.date(2023, 3, 1)).days
+    globalify = (today - datetime.date(2023, 6, 1)).days
 
     dates = {
         "bilimkana": bilimkana,
         "developstoday": developstoday,
         "eso": eso,
+        "cec": cec,
+        "globalify": globalify
     }
 
     for key, date in dates.items():
@@ -54,4 +62,6 @@ def ru():
 
 @app.get("/download")
 def download():
-    return send_file("./static/elements/Arstanbek_Usenov_CV.pdf", as_attachment=True)
+    return send_file(
+        "./static/elements/Arstanbek_Usenov_CV.pdf", as_attachment=True
+    )

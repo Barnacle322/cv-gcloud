@@ -97,7 +97,7 @@
                     <div class="contact-icon" style="transform: scale(0.85); margin-bottom: 5px">
                         <object data="{{ url_for('static',filename='elements/linkedin.svg') }}" width="24" height="24"> </object>
                     </div>
-                    <a class="contact-href contact-text" href="https://www.linkedin.com/in/arstan-usenov-a68a78225/">
+                    <a class="contact-href contact-text" href="https://www.linkedin.com/in/arstanbek-usenov-a68a78225/">
                         Open in LinkedIn
                     </a>
                 </div>
@@ -113,6 +113,11 @@
             
             <div class="education-info">
                 <div class="education-title">Education</div>
+                <div class="education">
+                    <div class="education-year">May 2023 - Jun 2023</div>
+                    <div class="education-program">Hero Training</div>
+                    <div class="education-place">Draper University, US</div>
+                </div>
                 <div class="education">
                     <div class="education-year">Sep 2021 - Jul 2022</div>
                     <div class="education-program">Engineering Stream</div>
@@ -170,7 +175,7 @@
 
                 <div class="skill">
                     <div class="skill-category">Frameworks and Libraries</div>
-                    <div class="skill-description">Flask, TailwindCSS, FastAPI, Django, pytest, Poetry, asyncio, asyncpg, Black, Python-Telegram-Bot, peewee, SQLAlchemy</div>
+                    <div class="skill-description">Flask, TailwindCSS, FastAPI, authlib, Stripe, Django, pytest, Poetry, asyncio, asyncpg, Black, Python-Telegram-Bot, peewee, SQLAlchemy</div>
                 </div>
 
                 <div class="skill">
@@ -188,11 +193,43 @@
                 <div class="experiences-title">Experience</div>
                 <div class="experience">
                     <div class="experience-position">
+                        <div>Chief Technology Officer</div> 
+                        <span>@ Globalify</span>
+                    </div>
+                    <div class="experience-year">
+                        June 2023 - Present
+                        <span style="color:#969ba1">
+                            ({{ dates["globalify"] }} days)
+                        </span> 
+                        // Kyrgyzstan
+                    </div>
+                    <div class="experience-description">- Develop and execute the technology strategy to align with the company's business goals and ensure the scalability and reliability of the SaaS platform.</div>
+                    <div class="experience-description">- Lead and manage the technology team, fostering innovation, collaboration, and a culture of continuous improvement.</div>
+                    <div class="experience-description">- Drive product innovation by staying updated with industry trends, identifying new opportunities, and overseeing the development of cutting-edge SaaS solutions.</div>
+                </div>
+                <div class="experience">
+                    <div class="experience-position">
+                        <div>Course Mentor</div> 
+                        <span>@ CEC AUCA</span>
+                    </div>
+                    <div class="experience-year">
+                        Mar 2023 - July 2023 
+                        <span style="color:#969ba1">
+                            ({{ dates["cec"] }} days)
+                        </span> 
+                        // (Remote)
+                    </div>
+                    <div class="experience-description">- Break down coding ideas for easy understanding.</div>
+                    <div class="experience-description">- Help with problem-solving and provide constructive feedback.</div>
+                    <div class="experience-description">- Encourage creative thinking and problem-solving through coding.</div>
+                </div>
+                <div class="experience">
+                    <div class="experience-position">
                         <div>Teacher</div> 
                         <span>@ Bilimkana-Bishkek</span>
                     </div>
                     <div class="experience-year">
-                        Sep 2022 - Present 
+                        Sep 2022 - Jun 2023 
                         <span style="color:#969ba1">
                             ({{ dates["bilimkana"] }} days)
                         </span> 
@@ -235,7 +272,7 @@
                     <div class="experience-description">- Come up with new and progressive ideas beneficial for the association.</div>
                 </div>
             </div>
-            <div class="linedivider"></div>
+            <!-- <div class="linedivider"></div>
             <div class="projects">
                 <div class="projects-title">Projects</div>
                 <div class="project">
@@ -250,7 +287,7 @@
                     </div>
                     <div class="project-description">A CRM system for an easy event registation and creation. It's built with <span style="font-weight: 700">Django</span> and <span style="font-weight: 700">Python-Telegram-Bot</span> and features interfaces through a web view and a telegram bot.</div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

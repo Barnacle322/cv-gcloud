@@ -97,7 +97,7 @@
                     <div class="contact-icon" style="transform: scale(0.85); margin-bottom: 5px">
                         <object data="{{ url_for('static',filename='elements/linkedin.svg') }}" width="24" height="24"> </object>
                     </div>
-                    <a class="contact-text contact-href" href="https://www.linkedin.com/in/arstan-usenov-a68a78225/">
+                    <a class="contact-text contact-href" href="https://www.linkedin.com/in/arstanbek-usenov-a68a78225/">
                         Открыть в LinkedIn
                     </a>
                 </div>
@@ -116,6 +116,11 @@
             
             <div class="education-info">
                 <div class="education-title">Образование</div>
+                <div class="education">
+                    <div class="education-year">Май 2023 - Июнь 2023</div>
+                    <div class="education-program">Hero Training</div>
+                    <div class="education-place">Draper University, US</div>
+                </div>
                 <div class="education">
                     <div class="education-year">Сентябрь 2021 - Июль 2022</div>
                     <div class="education-program">Engineering Stream</div>
@@ -173,7 +178,7 @@
 
                 <div class="skill">
                     <div class="skill-category">Фреймворки и Библиотеки</div>
-                    <div class="skill-description">Flask, TailwindCSS, FastAPI, Django, pytest, Poetry, asyncio, asyncpg, Black, Python-Telegram-Bot, peewee, SQLAlchemy</div>
+                    <div class="skill-description">Flask, TailwindCSS, FastAPI, authlib, Stripe, Django, pytest, Poetry, asyncio, asyncpg, Black, Python-Telegram-Bot, peewee, SQLAlchemy</div>
                 </div>
 
                 <div class="skill">
@@ -191,14 +196,46 @@
                 <div class="experiences-title">Опыт</div>
                 <div class="experience">
                     <div class="experience-position">
+                        <div>Технический Директор</div> 
+                        <span>@ Globalify</span>
+                    </div>
+                    <div class="experience-year">
+                        Июнь 2023 - Настоящее время
+                        <span style="color:#969ba1">
+                            ({{ dates["globalify"] }})
+                        </span> 
+                        // Kyrgyzstan
+                    </div>
+                    <div class="experience-description">- Разрабатывать и реализовать технологическую стратегию, соответствующую бизнес-целям компании и гарантирующую масштабируемость и надежность платформы SaaS.</div>
+                    <div class="experience-description">- Возглавлять и управлять технологической командой, способствуя инновациям, сотрудничеству и культуре постоянного совершенствования.</div>
+                    <div class="experience-description">- Стимулировать инновации в продуктах, оставаясь в курсе отраслевых тенденций, выявляя новые возможности и контролируя разработку передовых SaaS-решений.</div>
+                </div>
+                <div class="experience">
+                    <div class="experience-position">
+                        <div>Ментор Курса</div> 
+                        <span>@ CEC AUCA</span>
+                    </div>
+                    <div class="experience-year">
+                        Mar 2023 - July 2023 
+                        <span style="color:#969ba1">
+                            ({{ dates["cec"] }})
+                        </span> 
+                        // (Remote)
+                    </div>
+                    <div class="experience-description">- Разбивать идеи кодирования для облегчения понимания.</div>
+                    <div class="experience-description">- Помогать решать проблемы и давать конструктивную обратную связь.</div>
+                    <div class="experience-description">- Поощерять творческое мышление и решение проблем посредством программирования.</div>
+                </div>
+                <div class="experience">
+                    <div class="experience-position">
                         <div style="margin-right: 5px;">Преподаватель</div> 
                         <span>@ Bilimkana-Bishkek</span>
                     </div>
                     <div class="experience-year">
-                        Сентябрь 2022 - Настоящее время 
+                        Сентябрь 2022 - Июнь 2023 
                         <span style="color:#969ba1">
                             ({{ dates["bilimkana"] }})
-                        </span> 
+                        </span>
                         // Кыргызстан</div>
                     <div class="experience-description">- Обучать учеников фундаментальными и более продвинутыми концептам программирования в области веб-разработки.</div>
                     <div class="experience-description">- Составлять вовлекающий и продуктивный учебный план.</div>
@@ -237,7 +274,7 @@
                     <div class="experience-description">- Постоянная работа над новыми идеями во благо ассоциации.</div>
                 </div>
             </div>
-            <div class="linedivider"></div>
+            <!-- <div class="linedivider"></div>
             <div class="projects">
                 <div class="projects-title">Проекты</div>
                 <div class="project">
@@ -252,7 +289,7 @@
                     </div>
                     <div class="project-description">CRM система для легкого менеджмента ивентов. Сделана с помощью <span style="font-weight: 700">Django</span> and <span style="font-weight: 700">Python-Telegram-Bot</span> и имеет веб интерфейс и доступ через телеграм бота.</div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div style="display:block; position:relative; width:100%; height: 1px;"></div>
