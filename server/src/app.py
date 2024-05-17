@@ -18,7 +18,7 @@ def get_dates():
         "developstoday": developstoday,
         "eso": eso,
         "cec": cec,
-        "globalify": globalify
+        "globalify": globalify,
     }
     return dates
 
@@ -36,7 +36,7 @@ def get_dates_ru():
         "developstoday": developstoday,
         "eso": eso,
         "cec": cec,
-        "globalify": globalify
+        "globalify": globalify,
     }
 
     for key, date in dates.items():
@@ -62,6 +62,4 @@ def ru():
 
 @app.get("/download")
 def download():
-    return send_file(
-        "./static/elements/Arstanbek_Usenov_CV.pdf", as_attachment=True
-    )
+    return send_file("./static/elements/Arstanbek_Usenov_CV.pdf", as_attachment=True)
