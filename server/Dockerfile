@@ -1,6 +1,6 @@
-FROM python:3.10.4-alpine
+FROM python:3.12.2-alpine
 
-RUN pip install Flask==2.2.2 gunicorn --no-cache-dir
+RUN pip install Flask gunicorn --no-cache-dir
 
 COPY src/ app/
 WORKDIR /app
