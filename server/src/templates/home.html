@@ -1,304 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YBFQLPFRL"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-2YBFQLPFRL"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-        gtag('config', 'G-2YBFQLPFRL');
-    </script>
+            gtag("config", "G-2YBFQLPFRL");
+        </script>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/home.css') }}">
-    <script src="{{ url_for('static',filename='scripts/home.js') }}" defer></script>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static',filename='elements/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',filename='elements/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static',filename='elements/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ url_for('static',filename='elements/site.webmanifest') }}">
-    <link rel="mask-icon" href="{{ url_for('static',filename='elements/safari-pinned-tab.svg') }}" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#303134">
-    <meta name="theme-color" content="#ffffff">
-    
-    <!-- <link rel="stylesheet" href="./home.css"> -->
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static',filename='styles/home.css') }}"
+        />
+        <script
+            src="{{ url_for('static',filename='scripts/home.js') }}"
+            defer
+        ></script>
 
-    <title>Arstanbek Usenov // Software Developer</title>
-    <meta name="title" content="Arstanbek Usenov // Software Developer">
-    <meta name="description" content="Here you can find Arstanbek's CV">
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="{{ url_for('static',filename='elements/apple-touch-icon.png') }}"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="{{ url_for('static',filename='elements/favicon-32x32.png') }}"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="{{ url_for('static',filename='elements/favicon-16x16.png') }}"
+        />
+        <link
+            rel="manifest"
+            href="{{ url_for('static',filename='elements/site.webmanifest') }}"
+        />
+        <link
+            rel="mask-icon"
+            href="{{ url_for('static',filename='elements/safari-pinned-tab.svg') }}"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#303134" />
+        <meta name="theme-color" content="#ffffff" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://arstan.page">
-    <meta property="og:title" content="Arstanbek Usenov // Software Developer">
-    <meta property="og:description" content="Here you can find Arstanbek's CV">
-    <meta property="og:image" content="https://arstan.page/static/elements/cvphoto.jpg">
+        <!-- <link rel="stylesheet" href="./home.css"> -->
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://arstan.page">
-    <meta property="twitter:title" content="Arstanbek Usenov // Software Developer">
-    <meta property="twitter:description" content="Here you can find Arstanbek's CV">
-    <meta property="twitter:image" content="https://arstan.page/static/elements/cvphoto.jpg">
-</head>
-<body class="body">
-    <div class="cv">
-        <div class="side">
-            <input type="checkbox" id="switch-button" onclick="myFunction()">
-            <div class='langs'>
-                <a class='langswitch' href="/ru">RU</a>
-                <a class='langswitch' href="/">EN</a>
-                <a href="/download" class="download2">
-                    <div style="pointer-events: none;">
-                        <object data="{{ url_for('static',filename='elements/download.svg') }}" width="40" height="40"></object>
-                    </div>
-                </a>
-                <label for="switch-button" id="label">
-                    <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"> </object>
-                    <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"> </object>
-                </label>
-            </div>
-        
-            
-            <div class="picture">
-                <img id='img' src="{{ url_for('static',filename='/elements/pfp.jpg') }}" alt="myPicture">
-            </div>
-            <div class="name">Arstanbek Usenov</div>
-            <div class="location">Bishkek, Kyrgyzstan</div>
-            <div class="linedivider"></div>
-            <div class="contactinfo">
-                <div class="contactinfo-title">
-                    Contact Info
-                </div>
-                <div class="contact">
-                    <div class="contact-icon">
-                        <!-- <i class="envelope outline icon" style="margin-bottom: 5px;"></i> -->
-                        <object data="{{ url_for('static',filename='elements/mail.svg') }}" width="24" height="24"> </object>
-                    </div>
+        <title>Arstanbek Usenov // Software Developer</title>
+        <meta name="title" content="Arstanbek Usenov // Software Developer" />
+        <meta name="description" content="Here you can find Arstanbek's CV" />
 
-                    <a href="mailto:arstan.usenov@gmail.com" class="contact-href contact-text">
-                        arstan.usenov@gmail.com
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://arstan.page" />
+        <meta
+            property="og:title"
+            content="Arstanbek Usenov // Software Developer"
+        />
+        <meta
+            property="og:description"
+            content="Here you can find Arstanbek's CV"
+        />
+        <meta
+            property="og:image"
+            content="https://arstan.page/static/elements/cvphoto.jpg"
+        />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://arstan.page" />
+        <meta
+            property="twitter:title"
+            content="Arstanbek Usenov // Software Developer"
+        />
+        <meta
+            property="twitter:description"
+            content="Here you can find Arstanbek's CV"
+        />
+        <meta
+            property="twitter:image"
+            content="https://arstan.page/static/elements/cvphoto.jpg"
+        />
+    </head>
+    <body class="body">
+        <main class="cv">
+            <div class="side">
+                <input
+                    type="checkbox"
+                    id="switch-button"
+                    onclick="myFunction()"
+                />
+                <div class="langs">
+                    <a class="langswitch" href="/ru">RU</a>
+                    <a class="langswitch" href="/">EN</a>
+                    <a href="/download" class="download2">
+                        <div style="pointer-events: none">
+                            <object
+                                data="{{ url_for('static',filename='elements/download.svg') }}"
+                                width="40"
+                                height="40"
+                            ></object>
+                        </div>
                     </a>
+                    <label for="switch-button" id="label">
+                        <object
+                            data="{{ url_for('static',filename='elements/sun.svg') }}"
+                            width="40"
+                            height="40"
+                            id="sun"
+                        ></object>
+                        <object
+                            data="{{ url_for('static',filename='elements/moon.svg') }}"
+                            width="40"
+                            height="40"
+                            id="moon"
+                        ></object>
+                    </label>
                 </div>
-                <div class="contact">
-                    <div class="contact-icon" style="transform: scale(1.05); margin-bottom: 5px;">
-                        <object data="{{ url_for('static',filename='elements/phone.svg') }}" width="24" height="24"> </object>
+
+                <div class="picture">
+                    <img
+                        id="img"
+                        src="{{ url_for('static',filename='/elements/pfp.jpg') }}"
+                        alt="myPicture"
+                    />
+                </div>
+                <h1 class="name">Arstanbek Usenov</h1>
+                <span class="location">Bishkek, Kyrgyzstan</span>
+
+                <hr class="linedivider" />
+
+                <div class="contactinfo">
+                    <h2 class="contactinfo-title">Contact Info</h2>
+                    <div class="contact">
+                        <div class="contact-icon">
+                            <!-- <i class="envelope outline icon" style="margin-bottom: 5px;"></i> -->
+                            <object
+                                data="{{ url_for('static',filename='elements/mail.svg') }}"
+                                width="24"
+                                height="24"
+                            ></object>
+                        </div>
+
+                        <a
+                            href="mailto:arstan.usenov@gmail.com"
+                            class="contact-href contact-text"
+                        >
+                            arstan.usenov@gmail.com
+                        </a>
                     </div>
-                    <a href="tel:+996555250066" class="contact-href contact-text">
-                        +996 555 25 00 66
+                    <div class="contact">
+                        <div
+                            class="contact-icon"
+                            style="transform: scale(1.05); margin-bottom: 5px"
+                        >
+                            <object
+                                data="{{ url_for('static',filename='elements/phone.svg') }}"
+                                width="24"
+                                height="24"
+                            ></object>
+                        </div>
+                        <a
+                            href="tel:+996555250066"
+                            class="contact-href contact-text"
+                        >
+                            +996 555 25 00 66
+                        </a>
+                    </div>
+                    <div class="contact">
+                        <div
+                            class="contact-icon"
+                            style="transform: scale(0.85); margin-bottom: 5px"
+                        >
+                            <object
+                                data="{{ url_for('static',filename='elements/linkedin.svg') }}"
+                                width="24"
+                                height="24"
+                            ></object>
+                        </div>
+                        <a
+                            class="contact-href contact-text"
+                            href="https://www.linkedin.com/in/arstanbek-usenov-a68a78225/"
+                        >
+                            Open in LinkedIn
+                        </a>
+                    </div>
+                    <div class="contact">
+                        <div class="contact-icon">
+                            <object
+                                data="{{ url_for('static',filename='elements/telegram.svg') }}"
+                                width="24"
+                                height="24"
+                            ></object>
+                        </div>
+                        <a
+                            class="contact-href contact-text"
+                            href="https://t.me/Barnacle/"
+                            >Message on Telegram
+                        </a>
+                    </div>
+                </div>
+
+                <hr class="linedivider" />
+
+                <div class="education-info">
+                    <h2 class="education-title">Education</h2>
+                    <div class="education">
+                        <span class="education-year">May 2023 - Jun 2023</span>
+                        <span class="education-program">Hero Training</span>
+                        <span class="education-place"
+                            >Draper University, US</span
+                        >
+                    </div>
+                    <div class="education">
+                        <span class="education-year">Sep 2021 - Jul 2022</span>
+                        <span class="education-program"
+                            >Engineering Stream</span
+                        >
+                        <span class="education-place">
+                            Twente Pathway College, NL
+                        </span>
+                    </div>
+                    <div class="education">
+                        <span class="education-year">Oct 2019 - Jun 2020</span>
+                        <span class="education-program"
+                            >Java Backend Course</span
+                        >
+                        <span class="education-place">IT-Academy, KG</span>
+                    </div>
+                    <div class="education">
+                        <span class="education-year">May 2019 - Jul 2019</span>
+                        <span class="education-program"
+                            >Python Core Course</span
+                        >
+                        <span class="education-place">IT-Academy, KG</span>
+                    </div>
+                </div>
+
+                <hr class="linedivider" />
+
+                <div class="language-info">
+                    <h2 class="language-title">Languages</h2>
+                    <div class="language">
+                        <p class="language-name">English</p>
+                        <p class="language-level">Advanced(C1) - IELTS 8.0</p>
+                    </div>
+                    <div class="language">
+                        <p class="language-name">Russian</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="omitter">
+                <hr class="linedivider" />
+            </div>
+            <input type="checkbox" id="switch-button2" onclick="myFunction()" />
+            <div class="main">
+                <div class="buttons">
+                    <a href="/download" class="download">
+                        <div style="pointer-events: none">
+                            <object
+                                data="{{ url_for('static',filename='elements/download.svg') }}"
+                                width="40"
+                                height="40"
+                            ></object>
+                        </div>
                     </a>
+                    <label for="switch-button2" id="label2">
+                        <object
+                            data="{{ url_for('static',filename='elements/sun.svg') }}"
+                            width="40"
+                            height="40"
+                            id="sun"
+                        ></object>
+                        <object
+                            data="{{ url_for('static',filename='elements/moon.svg') }}"
+                            width="40"
+                            height="40"
+                            id="moon"
+                        ></object>
+                    </label>
                 </div>
-                <div class="contact">
-                    <div class="contact-icon" style="transform: scale(0.85); margin-bottom: 5px">
-                        <object data="{{ url_for('static',filename='elements/linkedin.svg') }}" width="24" height="24"> </object>
+                <div class="skills">
+                    <h2 class="skills-title">Skills</h2>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Programming Languages</h3>
+                        <p class="skill-description">
+                            Python, CSS, SQL, JavaScript
+                        </p>
                     </div>
-                    <a class="contact-href contact-text" href="https://www.linkedin.com/in/arstanbek-usenov-a68a78225/">
-                        Open in LinkedIn
-                    </a>
-                </div>
-                <div class="contact">
-                    <div class="contact-icon">
-                        <object data="{{ url_for('static',filename='elements/telegram.svg') }}" width="24" height="24"> </object>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Frameworks</h3>
+                        <p class="skill-description">
+                            Flask, FastAPI, Django, TailwindCSS, Vue,
+                            Python-Telegram-Bot
+                        </p>
                     </div>
-                    <a class="contact-href contact-text" href="https://t.me/Barnacle/">Message on Telegram </a>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Libraries</h3>
+                        <p class="skill-description">
+                            authlib, alembic, pytest, Poetry, asyncio, Selenium,
+                            SQLAlchemy, Babel, SocketIO
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Tools</h3>
+                        <p class="skill-description">
+                            pgModeler, Postman, DBeaver
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Technologies</h3>
+                        <p class="skill-description">
+                            Git, Docker, Google Cloud, Typesense, Supabase,
+                            Stripe, Neon, SendGrid
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Creative</h3>
+                        <p class="skill-description">
+                            Figma, Premiere Pro, Photoshop, Lightroom, Audition,
+                            Lightroom, DaVinci Resolve, Canva, Mixxx, MuseScore
+                        </p>
+                    </div>
                 </div>
+                <hr class="linedivider" />
+                <div class="experiences">
+                    <h2 class="experiences-title">Experience</h2>
+                    <div class="experience">
+                        <span class="experience-position">
+                            <h3>Chief Technology Officer</h3>
+                            <span> @ Globalify</span>
+                        </span>
+                        <span class="experience-year">
+                            June 2023 - Present
+                            <span style="color: #969ba1">
+                                ({{ dates["globalify"] }} days)
+                            </span>
+                            // Remote
+                        </span>
+                        <p class="experience-description">
+                            - Develop and execute the technology strategy to
+                            align with the company's business goals and ensure
+                            the scalability and reliability of the SaaS
+                            platform.
+                        </p>
+                        <p class="experience-description">
+                            - Lead and manage the technology team, fostering
+                            innovation, collaboration, and a culture of
+                            continuous improvement.
+                        </p>
+                        <p class="experience-description">
+                            - Drive product innovation by staying updated with
+                            industry trends, identifying new opportunities, and
+                            overseeing the development of cutting-edge SaaS
+                            solutions.
+                        </p>
+                    </div>
+                    <div class="experience">
+                        <span class="experience-position">
+                            <h3>Course Mentor</h3>
+                            <span>@ CEC AUCA</span>
+                        </span>
+                        <span class="experience-year">
+                            Mar 2023 - July 2023
+                            <span style="color: #969ba1">
+                                ({{ dates["cec"] }} days)
+                            </span>
+                            // Kyrgyzstan
+                        </span>
+                        <p class="experience-description">
+                            - Break down coding ideas for easy understanding.
+                        </p>
+                        <p class="experience-description">
+                            - Help with problem-solving and provide constructive
+                            feedback.
+                        </p>
+                        <p class="experience-description">
+                            - Encourage creative thinking and problem-solving
+                            through coding.
+                        </p>
+                    </div>
+                    <div class="experience">
+                        <span class="experience-position">
+                            <h3>Teacher</h3>
+                            <span>@ Bilimkana-Bishkek</span>
+                        </span>
+                        <span class="experience-year">
+                            Sep 2022 - Jun 2023
+                            <span style="color: #969ba1">
+                                ({{ dates["bilimkana"] }} days)
+                            </span>
+                            // Kyrgyzstan
+                        </span>
+                        <p class="experience-description">
+                            - Teach students basic and more advanced programming
+                            concepts in the field of web development.
+                        </p>
+                        <p class="experience-description">
+                            - Come up with engaging and productive study
+                            syllabus.
+                        </p>
+                        <p class="experience-description">
+                            - Periodically assess students and change the study
+                            matrix accordingly.
+                        </p>
+                    </div>
+                    <div class="experience">
+                        <span class="experience-position">
+                            <h3>Python Developer</h3>
+                            <span>@ DevelopsToday</span>
+                        </span>
+                        <span class="experience-year">
+                            Aug 2022 - Feb 2023
+                            <span style="color: #969ba1">
+                                ({{ dates["developstoday"] }} days)
+                            </span>
+                            // Ukraine (Remote)
+                        </span>
+                        <p class="experience-description">
+                            - Write asynchronous and reliable code for the
+                            assigned project. Make necessary changes to DBs and
+                            message brokers.
+                        </p>
+                        <p class="experience-description">
+                            - Concisely describe how the working day went during
+                            stand-up sessions.
+                        </p>
+                        <p class="experience-description">
+                            - Update and maintain the list of tasks in a
+                            practical manner.
+                        </p>
+                    </div>
+                    <div class="experience">
+                        <span class="experience-position">
+                            <h3>Software Engineer</h3>
+                            <span>@ ESO Association</span>
+                        </span>
+                        <span class="experience-year">
+                            Oct 2021 - Aug 2022
+                            <span style="color: #969ba1">
+                                ({{ dates["eso"] }} days)
+                            </span>
+                            // The Netherlands
+                        </span>
+                        <p class="experience-description">
+                            - Write concise and readable code for numerous
+                            systems for both internal and external use.
+                        </p>
+                        <p class="experience-description">
+                            - Daily communcation with other association's
+                            committees for a better product development.
+                        </p>
+                        <p class="experience-description">
+                            - Come up with new and progressive ideas beneficial
+                            for the association.
+                        </p>
+                    </div>
+                </div>
+                <!-- <hr class="linedivider" />
+                <div class="projects">
+                    <h2 class="projects-title">Projects</h2>
+                    <div class="project">
+                        <h3 class="project-name">
+                            Student House Grocery Management System
+                        </h3>
+                        <p class="project-description">
+                            A web app built with
+                            <b>Flask</b> and <b>PostgreSQL</b> for keeping track
+                            of the budget in a student house.
+                        </p>
+                    </div>
+                    <div class="project">
+                        <h3 class="project-name">Event Registration System</h3>
+                        <p class="project-description">
+                            A CRM system for an easy event registation and
+                            creation. It's built with
+                            <b>Django</b> and
+                            <b>Python-Telegram-Bot</b>
+                            and features interfaces through a web view and a
+                            telegram bot.
+                        </p>
+                    </div>
+                </div> -->
             </div>
-            
-            <div class="linedivider"></div>
-            
-            <div class="education-info">
-                <div class="education-title">Education</div>
-                <div class="education">
-                    <div class="education-year">May 2023 - Jun 2023</div>
-                    <div class="education-program">Hero Training</div>
-                    <div class="education-place">Draper University, US</div>
-                </div>
-                <div class="education">
-                    <div class="education-year">Sep 2021 - Jul 2022</div>
-                    <div class="education-program">Engineering Stream</div>
-                    <div class="education-place">Twente Pathway College, NL</div>
-                </div>
-                <div class="education">
-                    <div class="education-year">Oct 2019 - Jun 2020</div>
-                    <div class="education-program">Java Backend Course</div>
-                    <div class="education-place">IT-Academy, KG</div>
-                </div>
-                <div class="education">
-                    <div class="education-year">May 2019 - Jul 2019</div>
-                    <div class="education-program">Python Core Course</div>
-                    <div class="education-place">IT-Academy, KG</div>
-                </div>
-            </div>
-
-            <div class="linedivider"></div>
-
-            <div class="language-info">
-                <div class="language-title">Languages</div>
-                <div class="language">
-                    <div class="language-name">English</div>
-                    <div class="language-level">Advanced(C1) - IELTS 8.0</div>
-                </div>
-                <div class="language">
-                    <div class="language-name">Russian</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="omitter">
-            <div class="linedivider"></div>
-        </div>
-        <input type="checkbox" id="switch-button2" onclick="myFunction()">
-        <div class="main">
-            <div class="buttons">
-                <a href="/download" class="download">
-                    <div style="pointer-events: none;">
-                        <object data="{{ url_for('static',filename='elements/download.svg') }}" width="40" height="40"></object>
-                    </div>
-                </a>
-                <label for="switch-button2" id="label2">
-                    <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"></object>
-                    <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"></object>
-                </label>
-            </div>
-            <div class="skills">
-                <div class="skills-title">Skills</div>
-
-                <div class="skill">
-                    <div class="skill-category">Programming Languages</div>
-                    <div class="skill-description">Python, CSS, SQL, JavaScript</div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-category">Frameworks</div>
-                    <div class="skill-description">Flask, TailwindCSS, Vue, FastAPI, Django, Python-Telegram-Bot</div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-category">Libraries</div>
-                    <div class="skill-description">authlib, alembic, pytest, Poetry, asyncio, Selenium, SQLAlchemy</div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-category">Tools</div>
-                    <div class="skill-description">pgModeler, Postman, DBeaver</div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-category">Technologies</div>
-                    <div class="skill-description">Git, Docker, Google Cloud, Typesense, Supabase, Stripe, Neon</div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-category">Creative</div>
-                    <div class="skill-description">Figma, Premiere Pro, Photoshop, Lightroom, Audition, Lightroom, DaVinci Resolve, Canva, Mixxx, MuseScore</div>
-                </div>
-            </div>
-            <div class="linedivider"></div>
-            <div class="experiences">
-                <div class="experiences-title">Experience</div>
-                <div class="experience">
-                    <div class="experience-position">
-                        <div>Chief Technology Officer</div> 
-                        <span>@ Globalify</span>
-                    </div>
-                    <div class="experience-year">
-                        June 2023 - Present
-                        <span style="color:#969ba1">
-                            ({{ dates["globalify"] }} days)
-                        </span> 
-                        // Remote
-                    </div>
-                    <div class="experience-description">- Develop and execute the technology strategy to align with the company's business goals and ensure the scalability and reliability of the SaaS platform.</div>
-                    <div class="experience-description">- Lead and manage the technology team, fostering innovation, collaboration, and a culture of continuous improvement.</div>
-                    <div class="experience-description">- Drive product innovation by staying updated with industry trends, identifying new opportunities, and overseeing the development of cutting-edge SaaS solutions.</div>
-                </div>
-                <div class="experience">
-                    <div class="experience-position">
-                        <div>Course Mentor</div> 
-                        <span>@ CEC AUCA</span>
-                    </div>
-                    <div class="experience-year">
-                        Mar 2023 - July 2023 
-                        <span style="color:#969ba1">
-                            ({{ dates["cec"] }} days)
-                        </span> 
-                        // Kyrgyzstan 
-                    </div>
-                    <div class="experience-description">- Break down coding ideas for easy understanding.</div>
-                    <div class="experience-description">- Help with problem-solving and provide constructive feedback.</div>
-                    <div class="experience-description">- Encourage creative thinking and problem-solving through coding.</div>
-                </div>
-                <div class="experience">
-                    <div class="experience-position">
-                        <div>Teacher</div> 
-                        <span>@ Bilimkana-Bishkek</span>
-                    </div>
-                    <div class="experience-year">
-                        Sep 2022 - Jun 2023 
-                        <span style="color:#969ba1">
-                            ({{ dates["bilimkana"] }} days)
-                        </span> 
-                        // Kyrgyzstan
-                    </div>
-                    <div class="experience-description">- Teach students basic and more advanced programming concepts in the field of web development.</div>
-                    <div class="experience-description">- Come up with engaging and productive study syllabus.</div>
-                    <div class="experience-description">- Periodically assess students and change the study matrix accordingly.</div>
-                </div>
-                <div class="experience">
-                    <div class="experience-position">
-                        <div>Python Developer</div> 
-                        <span>@ DevelopsToday</span>
-                    </div>
-                    <div class="experience-year">
-                        Aug 2022 - Feb 2023 
-                        <span style="color:#969ba1">
-                            ({{ dates["developstoday"] }} days)
-                        </span> 
-                        // Ukraine (Remote)
-                    </div>
-                    <div class="experience-description">- Write asynchronous and reliable code for the assigned project. Make necessary changes to DBs and message brokers.</div>
-                    <div class="experience-description">- Concisely describe how the working day went during stand-up sessions.</div>
-                    <div class="experience-description">- Update and maintain the list of tasks in a practical manner.</div>
-                </div>
-                <div class="experience">
-                    <div class="experience-position">
-                        <div>Software Engineer</div> 
-                        <span>@ ESO Association</span>
-                    </div>
-                    <div class="experience-year">
-                        Oct 2021 - Aug 2022 
-                        <span style="color:#969ba1">
-                            ({{ dates["eso"] }} days)
-                        </span> 
-                        // The Netherlands
-                    </div>
-                    <div class="experience-description">- Write concise and readable code for numerous systems for both internal and external use.</div>
-                    <div class="experience-description">- Daily communcation with other association's committees for a better product development.</div>
-                    <div class="experience-description">- Come up with new and progressive ideas beneficial for the association.</div>
-                </div>
-            </div>
-            <!-- <div class="linedivider"></div>
-            <div class="projects">
-                <div class="projects-title">Projects</div>
-                <div class="project">
-                    <div class="project-name">
-                        Student House Grocery Management System
-                    </div>
-                    <div class="project-description">A web app built with <span style="font-weight: 700">Flask</span> and <span style="font-weight: 700">PostgreSQL</span> for keeping track of the budget in a student house.</div>
-                </div>
-                <div class="project">
-                    <div class="project-name">
-                        Event Registration System
-                    </div>
-                    <div class="project-description">A CRM system for an easy event registation and creation. It's built with <span style="font-weight: 700">Django</span> and <span style="font-weight: 700">Python-Telegram-Bot</span> and features interfaces through a web view and a telegram bot.</div>
-                </div>
-            </div> -->
-        </div>
-    </div>
-</body>
+        </main>
+    </body>
 </html>

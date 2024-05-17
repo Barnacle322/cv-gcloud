@@ -1,297 +1,517 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YBFQLPFRL"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-2YBFQLPFRL"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-        gtag('config', 'G-2YBFQLPFRL');
-    </script>
+            gtag("config", "G-2YBFQLPFRL");
+        </script>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/home.css') }}">
-    <script src="{{ url_for('static',filename='scripts/home.js') }}" defer></script>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static',filename='styles/home.css') }}"
+        />
+        <script
+            src="{{ url_for('static',filename='scripts/home.js') }}"
+            defer
+        ></script>
 
-    <!-- <link rel="stylesheet" href="./home.css"> -->
+        <!-- <link rel="stylesheet" href="./home.css"> -->
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static',filename='elements/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',filename='elements/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static',filename='elements/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ url_for('static',filename='elements/site.webmanifest') }}">
-    <link rel="mask-icon" href="{{ url_for('static',filename='elements/safari-pinned-tab.svg') }}" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#303134">
-    <meta name="theme-color" content="#ffffff">
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="{{ url_for('static',filename='elements/apple-touch-icon.png') }}"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="{{ url_for('static',filename='elements/favicon-32x32.png') }}"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="{{ url_for('static',filename='elements/favicon-16x16.png') }}"
+        />
+        <link
+            rel="manifest"
+            href="{{ url_for('static',filename='elements/site.webmanifest') }}"
+        />
+        <link
+            rel="mask-icon"
+            href="{{ url_for('static',filename='elements/safari-pinned-tab.svg') }}"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#303134" />
+        <meta name="theme-color" content="#ffffff" />
 
-    <!-- Primary Meta Tags -->
-    <title>Усенов Арстанбек // Разработчик</title>
-    <meta name="title" content="Усенов Арстанбек // Разработчик">
-    <meta name="description" content="Здесь вы можете найти резюме Арстанбека">
+        <!-- Primary Meta Tags -->
+        <title>Усенов Арстанбек // Разработчик</title>
+        <meta name="title" content="Усенов Арстанбек // Разработчик" />
+        <meta
+            name="description"
+            content="Здесь вы можете найти резюме Арстанбека"
+        />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://arstan.page/ru">
-    <meta property="og:title" content="Усенов Арстанбек // Разработчик">
-    <meta property="og:description" content="Здесь вы можете найти резюме Арстанбека">
-    <meta property="og:image" content="https://arstan.page/static/elements/cvphoto.jpg">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://arstan.page/ru" />
+        <meta property="og:title" content="Усенов Арстанбек // Разработчик" />
+        <meta
+            property="og:description"
+            content="Здесь вы можете найти резюме Арстанбека"
+        />
+        <meta
+            property="og:image"
+            content="https://arstan.page/static/elements/cvphoto.jpg"
+        />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://arstan.page/ru">
-    <meta property="twitter:title" content="Усенов Арстанбек // Разработчик">
-    <meta property="twitter:description" content="Здесь вы можете найти резюме Арстанбека">
-    <meta property="twitter:image" content="https://arstan.page/static/elements/cvphoto.jpg">
-</head>
-<body class="body">
-    <div class="cv">
-        <div class="side">
-            <input type="checkbox" id="switch-button" onclick="myFunction()">
-            <div class='langs'>
-                <a class='langswitch' href="/ru">RU</a>
-                <a class='langswitch' href="/">EN</a>
-                <a href="/download" class="download2">
-                    <div style="pointer-events: none;">
-                        <object data="{{ url_for('static',filename='elements/download.svg') }}" width="40" height="40"></object>
-                    </div>
-                </a>
-                <label for="switch-button" id="label">
-                    <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"> </object>
-                    <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"> </object>
-                </label>
-            </div>
-            
-            <div class="picture">
-                <img id='img' src="{{ url_for('static',filename='/elements/pfp.jpg') }}" alt="myPicture">
-            </div>
-            <div class="name ">Арстанбек Усенов</div>
-            <div class="location">Кыргызстан, Бишкек</div>
-            <div class="linedivider"></div>
-            <div class="contactinfo">
-                <div class="contactinfo-title">
-                    Контакты
-                </div>
-                <div class="contact">
-                    <div class="contact-icon">
-                        <object data="{{ url_for('static',filename='elements/mail.svg') }}" width="24" height="24"> </object>
-                    </div>
-
-                    <a class="contact-href contact-text" href="mailto:arstan.usenov@gmail.com">
-                        arstan.usenov@gmail.com
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://arstan.page/ru" />
+        <meta
+            property="twitter:title"
+            content="Усенов Арстанбек // Разработчик"
+        />
+        <meta
+            property="twitter:description"
+            content="Здесь вы можете найти резюме Арстанбека"
+        />
+        <meta
+            property="twitter:image"
+            content="https://arstan.page/static/elements/cvphoto.jpg"
+        />
+    </head>
+    <body class="body">
+        <main class="cv">
+            <div class="side">
+                <input
+                    type="checkbox"
+                    id="switch-button"
+                    onclick="myFunction()"
+                />
+                <div class="langs">
+                    <a class="langswitch" href="/ru">RU</a>
+                    <a class="langswitch" href="/">EN</a>
+                    <a href="/download" class="download2">
+                        <div style="pointer-events: none">
+                            <object
+                                data="{{ url_for('static',filename='elements/download.svg') }}"
+                                width="40"
+                                height="40"
+                            ></object>
+                        </div>
                     </a>
-                </div>
-                <div class="contact">
-                    <div class="contact-icon" style="transform: scale(1.05); margin-bottom: 5px;">
-                        <object data="{{ url_for('static',filename='elements/phone.svg') }}" width="24" height="24"> </object>
-                    </div>
-                    <a class="contact-text contact-href" href="tel:+996555250066">
-                        +996 555 25 00 66
-                    </a>
-                </div>
-                <div class="contact">
-                    <div class="contact-icon" style="transform: scale(0.85); margin-bottom: 5px">
-                        <object data="{{ url_for('static',filename='elements/linkedin.svg') }}" width="24" height="24"> </object>
-                    </div>
-                    <a class="contact-text contact-href" href="https://www.linkedin.com/in/arstanbek-usenov-a68a78225/">
-                        Открыть в LinkedIn
-                    </a>
-                </div>
-                <div class="contact">
-                    <div class="contact-icon">
-                        <object data="{{ url_for('static',filename='elements/telegram.svg') }}" width="24" height="24"> </object>
-                    </div>
-                    <a class="contact-text contact-href" href="https://t.me/Barnacle/">
-                        Написать в Telegram
-                    </a>
+                    <label for="switch-button" id="label">
+                        <object
+                            data="{{ url_for('static',filename='elements/sun.svg') }}"
+                            width="40"
+                            height="40"
+                            id="sun"
+                        ></object>
+                        <object
+                            data="{{ url_for('static',filename='elements/moon.svg') }}"
+                            width="40"
+                            height="40"
+                            id="moon"
+                        ></object>
+                    </label>
                 </div>
 
-            </div>
-            
-            <div class="linedivider"></div>
-            
-            <div class="education-info">
-                <div class="education-title">Образование</div>
-                <div class="education">
-                    <div class="education-year">Май 2023 - Июнь 2023</div>
-                    <div class="education-program">Hero Training</div>
-                    <div class="education-place">Draper University, US</div>
+                <div class="picture">
+                    <img
+                        id="img"
+                        src="{{ url_for('static',filename='/elements/pfp.jpg') }}"
+                        alt="myPicture"
+                    />
                 </div>
-                <div class="education">
-                    <div class="education-year">Сентябрь 2021 - Июль 2022</div>
-                    <div class="education-program">Engineering Stream</div>
-                    <div class="education-place">Twente Pathway College, NL</div>
-                </div>
-                <div class="education">
-                    <div class="education-year">Октябрь 2019 - Июнь 2020</div>
-                    <div class="education-program">Java Backend Course</div>
-                    <div class="education-place">IT-Academy, KG</div>
-                </div>
-                <div class="education">
-                    <div class="education-year">Май 2019 - Июль 2019</div>
-                    <div class="education-program">Python Core Course</div>
-                    <div class="education-place">IT-Academy, KG</div>
-                </div>
-            </div>
+                <h1 class="name">Арстанбек Усенов</h1>
+                <span class="location">Кыргызстан, Бишкек</span>
 
-            <div class="linedivider"></div>
+                <hr class="linedivider" />
 
-            <div class="language-info">
-                <div class="language-title">Языки</div>
-                <div class="language">
-                    <div class="language-name">Английский</div>
-                    <div class="language-level">Advanced(C1) - IELTS 8.0</div>
-                </div>
-                <div class="language ">
-                    <div class="language-name">Русский</div>
-                </div>
-            </div>
-        </div>
+                <div class="contactinfo">
+                    <h2 class="contactinfo-title">Контакты</h2>
+                    <div class="contact">
+                        <div class="contact-icon">
+                            <!-- <i class="envelope outline icon" style="margin-bottom: 5px;"></i> -->
+                            <object
+                                data="{{ url_for('static',filename='elements/mail.svg') }}"
+                                width="24"
+                                height="24"
+                            ></object>
+                        </div>
 
-        <div class="omitter">
-            <div class="linedivider"></div>
-        </div>
-        <input type="checkbox" id="switch-button2" onclick="myFunction()">
-        <div class="main">
-            <div class="buttons">
-                <a href="/download" class="download">
-                    <div style="pointer-events: none;">
-                        <object data="{{ url_for('static',filename='elements/download.svg') }}" width="40" height="40"></object>
+                        <a
+                            href="mailto:arstan.usenov@gmail.com"
+                            class="contact-href contact-text"
+                        >
+                            arstan.usenov@gmail.com
+                        </a>
                     </div>
-                </a>
-                <label for="switch-button2" id="label2">
-                    <object data="{{ url_for('static',filename='elements/sun.svg') }}" width="40" height="40" id="sun"></object>
-                    <object data="{{ url_for('static',filename='elements/moon.svg') }}" width="40" height="40" id="moon"></object>
-                </label>
-            </div>
-            <div class="skills">
-                <div class="skills-title">Skills</div>
+                    <div class="contact">
+                        <div
+                            class="contact-icon"
+                            style="transform: scale(1.05); margin-bottom: 5px"
+                        >
+                            <object
+                                data="{{ url_for('static',filename='elements/phone.svg') }}"
+                                width="24"
+                                height="24"
+                            ></object>
+                        </div>
+                        <a
+                            href="tel:+996555250066"
+                            class="contact-href contact-text"
+                        >
+                            +996 555 25 00 66
+                        </a>
+                    </div>
+                    <div class="contact">
+                        <div
+                            class="contact-icon"
+                            style="transform: scale(0.85); margin-bottom: 5px"
+                        >
+                            <object
+                                data="{{ url_for('static',filename='elements/linkedin.svg') }}"
+                                width="24"
+                                height="24"
+                            ></object>
+                        </div>
+                        <a
+                            class="contact-href contact-text"
+                            href="https://www.linkedin.com/in/arstanbek-usenov-a68a78225/"
+                        >
+                            Открыть в LinkedIn
+                        </a>
+                    </div>
+                    <div class="contact">
+                        <div class="contact-icon">
+                            <object
+                                data="{{ url_for('static',filename='elements/telegram.svg') }}"
+                                width="24"
+                                height="24"
+                            ></object>
+                        </div>
+                        <a
+                            class="contact-href contact-text"
+                            href="https://t.me/Barnacle/"
+                        >
+                            Написать в Telegram
+                        </a>
+                    </div>
+                </div>
 
-                <div class="skill">
-                    <div class="skill-category">Языки Программирования</div>
-                    <div class="skill-description">Python, HTML, CSS, SQL, JavaScript</div>
-                </div>
+                <hr class="linedivider" />
 
-                <div class="skill">
-                    <div class="skill-category">Фреймворки и Библиотеки</div>
-                    <div class="skill-description">Flask, TailwindCSS, FastAPI, authlib, Stripe, Django, pytest, Poetry, asyncio, asyncpg, Black, Python-Telegram-Bot, peewee, SQLAlchemy</div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-category">Утилиты</div>
-                    <div class="skill-description">Git, pgModeler, Docker, Google Cloud, Supabase, Postman, PostgreSQL, SQLite, DBeaver, pgAdmin</div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-category">Креатив</div>
-                    <div class="skill-description">Figma, Adobe Premiere Pro, Adobe Photoshop, Adobe Lightroom, Adobe Audition, Adobe Lightroom, Canva, MuseScore</div>
-                </div>
-            </div>
-            <div class="linedivider"></div>
-            <div class="experiences">
-                <div class="experiences-title">Опыт</div>
-                <div class="experience">
-                    <div class="experience-position">
-                        <div>Технический Директор</div> 
-                        <span>@ Globalify</span>
+                <div class="education-info">
+                    <h2 class="education-title">Образование</h2>
+                    <div class="education">
+                        <span class="education-year">Май 2023 - Июнь 2023</span>
+                        <span class="education-program">Hero Training</span>
+                        <span class="education-place"
+                            >Draper University, US</span
+                        >
                     </div>
-                    <div class="experience-year">
-                        Июнь 2023 - Настоящее время
-                        <span style="color:#969ba1">
-                            ({{ dates["globalify"] }})
-                        </span> 
-                        // Kyrgyzstan
-                    </div>
-                    <div class="experience-description">- Разрабатывать и реализовать технологическую стратегию, соответствующую бизнес-целям компании и гарантирующую масштабируемость и надежность платформы SaaS.</div>
-                    <div class="experience-description">- Возглавлять и управлять технологической командой, способствуя инновациям, сотрудничеству и культуре постоянного совершенствования.</div>
-                    <div class="experience-description">- Стимулировать инновации в продуктах, оставаясь в курсе отраслевых тенденций, выявляя новые возможности и контролируя разработку передовых SaaS-решений.</div>
-                </div>
-                <div class="experience">
-                    <div class="experience-position">
-                        <div>Ментор Курса</div> 
-                        <span>@ CEC AUCA</span>
-                    </div>
-                    <div class="experience-year">
-                        Mar 2023 - July 2023 
-                        <span style="color:#969ba1">
-                            ({{ dates["cec"] }})
-                        </span> 
-                        // (Remote)
-                    </div>
-                    <div class="experience-description">- Разбивать идеи кодирования для облегчения понимания.</div>
-                    <div class="experience-description">- Помогать решать проблемы и давать конструктивную обратную связь.</div>
-                    <div class="experience-description">- Поощерять творческое мышление и решение проблем посредством программирования.</div>
-                </div>
-                <div class="experience">
-                    <div class="experience-position">
-                        <div style="margin-right: 5px;">Преподаватель</div> 
-                        <span>@ Bilimkana-Bishkek</span>
-                    </div>
-                    <div class="experience-year">
-                        Сентябрь 2022 - Июнь 2023 
-                        <span style="color:#969ba1">
-                            ({{ dates["bilimkana"] }})
+                    <div class="education">
+                        <span class="education-year"
+                            >Сентябрь 2021 - Июль 2022</span
+                        >
+                        <span class="education-program"
+                            >Engineering Stream</span
+                        >
+                        <span class="education-place">
+                            Twente Pathway College, NL
                         </span>
-                        // Кыргызстан</div>
-                    <div class="experience-description">- Обучать учеников фундаментальными и более продвинутыми концептам программирования в области веб-разработки.</div>
-                    <div class="experience-description">- Составлять вовлекающий и продуктивный учебный план.</div>
-                    <div class="experience-description">- Периодично оценивать студентов и изменять матрицу обучения соответственно.</div>
+                    </div>
+                    <div class="education">
+                        <span class="education-year"
+                            >Октябрь 2019 - Июнь 2020</span
+                        >
+                        <span class="education-program"
+                            >Java Backend Course</span
+                        >
+                        <span class="education-place">IT-Academy, KG</span>
+                    </div>
+                    <div class="education">
+                        <span class="education-year">Май 2019 - Июль 2019</span>
+                        <span class="education-program"
+                            >Python Core Course</span
+                        >
+                        <span class="education-place">IT-Academy, KG</span>
+                    </div>
                 </div>
-                <div class="experience">
-                    <div class="experience-position">
-                        <div>Питон Разработчик</div> 
-                        <span>@ DevelopsToday</span>
+
+                <hr class="linedivider" />
+
+                <div class="language-info">
+                    <h2 class="language-title">Языки</h2>
+                    <div class="language">
+                        <p class="language-name">Английский</p>
+                        <p class="language-level">Advanced(C1) - IELTS 8.0</p>
                     </div>
-                    <div class="experience-year">
-                        Август 2022 - Февраль 2023 
-                        <span style="color:#969ba1">
-                            ({{ dates["developstoday"] }})
-                        </span> 
-                        // Украина (Удаленно)
+                    <div class="language">
+                        <p class="language-name">Русский</p>
                     </div>
-                    <div class="experience-description">- Писать асинхронный и надежный код для назначенного проекта. Вносить необходимые изменения в БД и брокеры сообщений.</div>
-                    <div class="experience-description">- Кратко описывать, как прошел рабочий день во время стендап-сессий.</div>
-                    <div class="experience-description">- Обновлять и поддерживать список задач в практичной маннере.</div>
-                </div>
-                <div class="experience">
-                    <div class="experience-position">
-                        <div>Разработчик</div>
-                        <span style="color: #969ba1"> @ ESO Association</span>
-                    </div>
-                    <div class="experience-year">
-                        Октябрь 2021 - Август 2022 
-                        <span style="color:#969ba1">
-                            ({{ dates["eso"] }})
-                        </span> 
-                        // Нидерланды
-                    </div>
-                    <div class="experience-description">- Написание лаконичного и читаемого кода для использования внутри и вне ассоциации.</div>
-                    <div class="experience-description">- Ежедневная коммуникация между другими комитетами ассоциации для лучшей разработки продуктов.</div>
-                    <div class="experience-description">- Постоянная работа над новыми идеями во благо ассоциации.</div>
                 </div>
             </div>
-            <!-- <div class="linedivider"></div>
-            <div class="projects">
-                <div class="projects-title">Проекты</div>
-                <div class="project">
-                    <div class="project-name">
-                        Система Менджмента Бюджета Общежитий
-                    </div>
-                    <div class="project-description">Веб приложение, которое создано на основе <span style="font-weight: 700">Flask</span> и <span style="font-weight: 700">PostgreSQL</span> для учеты бюджета жителей общежития.</div>
+
+            <div class="omitter">
+                <hr class="linedivider" />
+            </div>
+            <input type="checkbox" id="switch-button2" onclick="myFunction()" />
+            <div class="main">
+                <div class="buttons">
+                    <a href="/download" class="download">
+                        <div style="pointer-events: none">
+                            <object
+                                data="{{ url_for('static',filename='elements/download.svg') }}"
+                                width="40"
+                                height="40"
+                            ></object>
+                        </div>
+                    </a>
+                    <label for="switch-button2" id="label2">
+                        <object
+                            data="{{ url_for('static',filename='elements/sun.svg') }}"
+                            width="40"
+                            height="40"
+                            id="sun"
+                        ></object>
+                        <object
+                            data="{{ url_for('static',filename='elements/moon.svg') }}"
+                            width="40"
+                            height="40"
+                            id="moon"
+                        ></object>
+                    </label>
                 </div>
-                <div class="project">
-                    <div class="project-name">
-                        Система Регистраций на Ивенты
+                <div class="skills">
+                    <h2 class="skills-title">Навыки</h2>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Языки Программирования</h3>
+                        <p class="skill-description">
+                            Python, CSS, SQL, JavaScript
+                        </p>
                     </div>
-                    <div class="project-description">CRM система для легкого менеджмента ивентов. Сделана с помощью <span style="font-weight: 700">Django</span> and <span style="font-weight: 700">Python-Telegram-Bot</span> и имеет веб интерфейс и доступ через телеграм бота.</div>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Фреймворки</h3>
+                        <p class="skill-description">
+                            Flask, FastAPI, Django, TailwindCSS, Vue,
+                            Python-Telegram-Bot
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Библиотеки</h3>
+                        <p class="skill-description">
+                            authlib, alembic, pytest, Poetry, asyncio, Selenium,
+                            SQLAlchemy, Babel, SocketIO
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Инструменты</h3>
+                        <p class="skill-description">
+                            pgModeler, Postman, DBeaver
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Технологии</h3>
+                        <p class="skill-description">
+                            Git, Docker, Google Cloud, Typesense, Supabase,
+                            Stripe, Neon, SendGrid
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3 class="skill-category">Креатив</h3>
+                        <p class="skill-description">
+                            Figma, Premiere Pro, Photoshop, Lightroom, Audition,
+                            Lightroom, DaVinci Resolve, Canva, Mixxx, MuseScore
+                        </p>
+                    </div>
                 </div>
-            </div> -->
-        </div>
-    </div>
-    <div style="display:block; position:relative; width:100%; height: 1px;"></div>
-</body>
+                <hr class="linedivider" />
+                <div class="experiences">
+                    <h2 class="experiences-title">Опыт</h2>
+                    <div class="experience">
+                        <span class="experience-position">
+                            <h3>Технический Директор</h3>
+                            <span> @ Globalify</span>
+                        </span>
+                        <span class="experience-year">
+                            June 2023 - Present
+                            <span style="color: #969ba1">
+                                ({{ dates["globalify"] }})
+                            </span>
+                            // Remote
+                        </span>
+                        <p class="experience-description">
+                            Разрабатывать и реализовать технологическую
+                            стратегию, соответствующую бизнес-целям компании и
+                            гарантирующую масштабируемость и надежность
+                            платформы SaaS.
+                        </p>
+                        <p class="experience-description">
+                            - Возглавлять и управлять технологической командой,
+                            способствуя инновациям, сотрудничеству и культуре
+                            постоянного совершенствования.
+                        </p>
+                        <p class="experience-description">
+                            - Стимулировать инновации в продуктах, оставаясь в
+                            курсе отраслевых тенденций, выявляя новые
+                            возможности и контролируя разработку передовых
+                            SaaS-решений.
+                        </p>
+                    </div>
+                    <div class="experience">
+                        <span class="experience-position">
+                            <h3>Ментор Курса</h3>
+                            <span>@ CEC AUCA</span>
+                        </span>
+                        <span class="experience-year">
+                            Mar 2023 - July 2023
+                            <span style="color: #969ba1">
+                                ({{ dates["cec"] }})
+                            </span>
+                            // Kyrgyzstan
+                        </span>
+                        <p class="experience-description">
+                            - Разбивать идеи программирования для облегчения
+                            понимания.
+                        </p>
+                        <p class="experience-description">
+                            - Помогать решать проблемы и давать конструктивную
+                            обратную связь.
+                        </p>
+                        <p class="experience-description">
+                            - Поощерять творческое мышление и решение проблем
+                            посредством программирования.
+                        </p>
+                    </div>
+                    <div class="experience">
+                        <span class="experience-position">
+                            <h3>Преподаватель</h3>
+                            <span>@ Bilimkana-Bishkek</span>
+                        </span>
+                        <span class="experience-year">
+                            Sep 2022 - Jun 2023
+                            <span style="color: #969ba1">
+                                ({{ dates["bilimkana"] }})
+                            </span>
+                            // Kyrgyzstan
+                        </span>
+                        <p class="experience-description">
+                            - Обучать учеников фундаментальными и более
+                            продвинутыми концептам программирования в области
+                            веб-разработки.
+                        </p>
+                        <p class="experience-description">
+                            - Составлять вовлекающий и продуктивный учебный
+                            план.
+                        </p>
+                        <p class="experience-description">
+                            - Периодично оценивать студентов и изменять матрицу
+                            обучения соответственно.
+                        </p>
+                    </div>
+                    <div class="experience">
+                        <span class="experience-position">
+                            <h3>Питон Разработчик</h3>
+                            <span>@ DevelopsToday</span>
+                        </span>
+                        <span class="experience-year">
+                            Aug 2022 - Feb 2023
+                            <span style="color: #969ba1">
+                                ({{ dates["developstoday"] }})
+                            </span>
+                            // Ukraine (Remote)
+                        </span>
+                        <p class="experience-description">
+                            - Писать асинхронный и надежный код для назначенного
+                            проекта. Вносить необходимые изменения в БД и
+                            брокеры сообщений.
+                        </p>
+                        <p class="experience-description">
+                            - Кратко описывать, как прошел рабочий день во время
+                            стендап-сессий.
+                        </p>
+                        <p class="experience-description">
+                            - Обновлять и поддерживать список задач в практичной
+                            маннере.
+                        </p>
+                    </div>
+                    <div class="experience">
+                        <span class="experience-position">
+                            <h3>Разработчик</h3>
+                            <span>@ ESO Association</span>
+                        </span>
+                        <span class="experience-year">
+                            Oct 2021 - Aug 2022
+                            <span style="color: #969ba1">
+                                ({{ dates["eso"] }})
+                            </span>
+                            // The Netherlands
+                        </span>
+                        <p class="experience-description">
+                            - Написание лаконичного и читаемого кода для
+                            использования внутри и вне ассоциации.
+                        </p>
+                        <p class="experience-description">
+                            - Ежедневная коммуникация между другими комитетами
+                            ассоциации для лучшей разработки продуктов.
+                        </p>
+                        <p class="experience-description">
+                            - Постоянная работа над новыми идеями во благо
+                            ассоциации.
+                        </p>
+                    </div>
+                </div>
+                <!-- <hr class="linedivider" />
+                <div class="projects">
+                    <h2 class="projects-title">Projects</h2>
+                    <div class="project">
+                        <h3 class="project-name">
+                            Student House Grocery Management System
+                        </h3>
+                        <p class="project-description">
+                            A web app built with
+                            <b>Flask</b> and <b>PostgreSQL</b> for keeping track
+                            of the budget in a student house.
+                        </p>
+                    </div>
+                    <div class="project">
+                        <h3 class="project-name">Event Registration System</h3>
+                        <p class="project-description">
+                            A CRM system for an easy event registation and
+                            creation. It's built with
+                            <b>Django</b> and
+                            <b>Python-Telegram-Bot</b>
+                            and features interfaces through a web view and a
+                            telegram bot.
+                        </p>
+                    </div>
+                </div> -->
+            </div>
+        </main>
+    </body>
 </html>
