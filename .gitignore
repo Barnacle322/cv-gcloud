@@ -131,3 +131,5 @@ dmypy.json
 
 # Custom
 start.ps1
+
+.DS_STORE
