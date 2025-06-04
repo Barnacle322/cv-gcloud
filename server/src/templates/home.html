@@ -105,8 +105,6 @@
                     onclick="myFunction()"
                 />
                 <div class="langs">
-                    <a class="langswitch" href="/ru">RU</a>
-                    <a class="langswitch" href="/">EN</a>
                     <a href="/download" class="download2">
                         <div style="pointer-events: none">
                             <object
@@ -140,7 +138,7 @@
                     />
                 </div>
                 <h1 class="name">Arstanbek Usenov</h1>
-                <span class="location">New Delhi, India</span>
+                <span class="location">Hanoi, Vietnam</span>
 
                 <hr class="linedivider" />
 
@@ -176,6 +174,7 @@
                         </div>
                         <a
                             class="contact-href contact-text"
+                            target="_blank"
                             href="https://www.linkedin.com/in/arstanbek-usenov-a68a78225/"
                         >
                             Open in LinkedIn
@@ -191,6 +190,7 @@
                         </div>
                         <a
                             class="contact-href contact-text"
+                            target="_blank"
                             href="https://t.me/Barnacle/"
                             >Message on Telegram
                         </a>
@@ -201,15 +201,6 @@
 
                 <div class="education-info">
                     <h2 class="education-title">Education</h2>
-                    <div class="education">
-                        <span class="education-year">Sep 2024 - May 2028</span>
-                        <span class="education-program"
-                            >BSc in Management & Technology</span
-                        >
-                        <span class="education-place"
-                            >TETR College of Business</span
-                        >
-                    </div>
                     <div class="education">
                         <span class="education-year">May 2023 - Jun 2023</span>
                         <span class="education-program">Hero Training</span>
@@ -292,23 +283,23 @@
                     <div class="skill">
                         <h3 class="skill-category">Programming Languages</h3>
                         <p class="skill-description">
-                            Python, JavaScript, Java, SQL
+                            Python, JavaScript, Java, SQL, Rust
                         </p>
                     </div>
 
                     <div class="skill">
                         <h3 class="skill-category">Frameworks</h3>
                         <p class="skill-description">
-                            Flask, FastAPI, Django, TailwindCSS, Vue, Express,
-                            Python-Telegram-Bot
+                            Flask, FastAPI, Django, TailwindCSS, Vue.js, pinia,
+                            Express, Anchor, Python-Telegram-Bot
                         </p>
                     </div>
 
                     <div class="skill">
                         <h3 class="skill-category">Libraries</h3>
                         <p class="skill-description">
-                            authlib, alembic, pytest, Poetry, asyncio, Selenium,
-                            SQLAlchemy, Babel, Pydantic
+                            authlib, alembic, pytest, uv, Poetry, asyncio,
+                            Selenium, SQLAlchemy, Babel, Pydantic
                         </p>
                     </div>
 
@@ -341,11 +332,41 @@
                     <h2 class="experiences-title">Experience</h2>
                     <div class="experience">
                         <span class="experience-position">
+                            <h3>Technology Lead</h3>
+                            <span> @ kasu.fun</span>
+                        </span>
+                        <span class="experience-year">
+                            April 2025 - Present
+                            <span style="color: #969ba1">
+                                ({{ dates["kasu"] }} days)
+                            </span>
+                            // Remote
+                        </span>
+                        <p class="experience-description">
+                            - Developed a Solana-based backend using Rust/Anchor
+                            and a Python client to power on-chain parimutuel
+                            betting and quiz mechanics.
+                        </p>
+                        <p class="experience-description">
+                            - Built a full-stack web application with Python
+                            (Flask) APIs and a Vue.js frontend to enable quiz
+                            creation, participation, and leaderboard
+                            functionality.
+                        </p>
+                        <p class="experience-description">
+                            - Integrated AI-driven components and external
+                            services (e.g., social media posting, dynamic image
+                            generation) to enhance user engagement and automate
+                            key workflows.
+                        </p>
+                    </div>
+                    <div class="experience">
+                        <span class="experience-position">
                             <h3>Chief Technology Officer</h3>
                             <span> @ Globalify</span>
                         </span>
                         <span class="experience-year">
-                            June 2023 - Present
+                            June 2023 - June 2025
                             <span style="color: #969ba1">
                                 ({{ dates["globalify"] }} days)
                             </span>
@@ -365,6 +386,39 @@
                             - Established a deployment infrustructure that would
                             cut the deployment time by 50% and increase the
                             reliability of the system.
+                        </p>
+                    </div>
+                    <div class="experience">
+                        <span class="experience-position">
+                            <h3>Chief Technology Officer</h3>
+                            <span> @ WIoT Technologies</span>
+                        </span>
+                        <span class="experience-year">
+                            Apr 2023 - Dec 2023
+                            <span style="color: #969ba1">
+                                ({{ dates["wiot"] }} days)
+                            </span>
+                            // Bishkek
+                        </span>
+                        <p class="experience-description">
+                            - Led the end-to-end development and deployment of
+                            WIOT's unified IoT platform, architecting a scalable
+                            infrastructure that aggregates and visualizes device
+                            data for businesses and homes in Bishkek.
+                        </p>
+                        <p class="experience-description">
+                            - Designed and implemented robust integrations with
+                            diverse IoT devices and communication protocols,
+                            ensuring seamless data collection, real-time
+                            monitoring, and centralized management for end
+                            users.
+                        </p>
+                        <p class="experience-description">
+                            - Directed full-stack engineering efforts,
+                            optimizing cloud-based services and platform
+                            features to deliver high-level overviews, analytics,
+                            and actionable insights across a city-wide network
+                            of connected devices.
                         </p>
                     </div>
                     <div class="experience">

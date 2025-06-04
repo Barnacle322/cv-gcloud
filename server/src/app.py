@@ -11,7 +11,9 @@ def get_dates():
     developstoday = (datetime.date(2023, 2, 1) - datetime.date(2022, 8, 8)).days
     eso = (datetime.date(2022, 8, 8) - datetime.date(2021, 9, 14)).days
     cec = (datetime.date(2023, 7, 1) - datetime.date(2023, 3, 1)).days
-    globalify = (today - datetime.date(2023, 6, 1)).days
+    globalify = (datetime.date(2025, 6, 1) - datetime.date(2023, 6, 1)).days
+    kasu = (today - datetime.date(2025, 4, 1)).days
+    wiot = (datetime.date(2023, 12, 1) - datetime.date(2023, 6, 1)).days
 
     dates = {
         "bilimkana": bilimkana,
@@ -19,45 +21,15 @@ def get_dates():
         "eso": eso,
         "cec": cec,
         "globalify": globalify,
+        "kasu": kasu,
+        "wiot": wiot,
     }
-    return dates
-
-
-def get_dates_ru():
-    today = datetime.date.today()
-    bilimkana = (datetime.date(2023, 6, 1) - datetime.date(2022, 9, 1)).days
-    developstoday = (datetime.date(2023, 2, 1) - datetime.date(2022, 8, 8)).days
-    eso = (datetime.date(2022, 8, 8) - datetime.date(2021, 9, 14)).days
-    cec = (datetime.date(2023, 7, 1) - datetime.date(2023, 3, 1)).days
-    globalify = (today - datetime.date(2023, 6, 1)).days
-
-    dates = {
-        "bilimkana": bilimkana,
-        "developstoday": developstoday,
-        "eso": eso,
-        "cec": cec,
-        "globalify": globalify,
-    }
-
-    for key, date in dates.items():
-        if str(date)[-1] == "1":
-            dates[key] = str(date) + " день"
-        elif str(date)[-1] == "2" or str(date)[-1] == "3" or str(date)[-1] == "4":
-            dates[key] = str(date) + " дня"
-        else:
-            dates[key] = str(date) + " дней"
-
     return dates
 
 
 @app.get("/")
 def home():
     return render_template("home.html", dates=get_dates())
-
-
-@app.get("/ru")
-def ru():
-    return render_template("home_ru.html", dates=get_dates_ru())
 
 
 @app.get("/download")
