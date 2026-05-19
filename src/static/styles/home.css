@@ -81,7 +81,7 @@ p {
 
 .cv {
     display: flex;
-    width: 900px;
+    width: min(1100px, calc(100% - 80px));
     height: fit-content;
     background: var(--secondary-bg-dark);
     position: relative;
@@ -112,23 +112,11 @@ p {
     flex-direction: row;
     margin: 10px;
     align-items: center;
+    gap: 4px;
 }
 
-#switch-button {
-    cursor: pointer;
-    display: none;
-}
-
+#switch-button,
 #switch-button2 {
-    cursor: pointer;
-    display: none;
-}
-
-#label {
-    height: 40px;
-    width: 40px;
-    position: relative;
-    cursor: pointer;
     display: none;
 }
 
@@ -136,48 +124,71 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 20px);
     height: fit-content;
     justify-content: flex-end;
+    margin: 10px;
+    gap: 4px;
 }
 
-.download {
+.icon-btn {
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--secondary-font-dark);
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.icon-btn:hover {
+    color: var(--main-font-dark);
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.cv-light .icon-btn:hover {
+    color: var(--main-bg-dark);
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.icon-btn .icon {
+    width: 22px;
+    height: 22px;
 }
 
 .download2 {
     margin-left: auto;
-    margin-right: 10px;
     display: none;
 }
 
-#label2 {
-    height: 40px;
-    width: 40px;
-    position: relative;
-    cursor: pointer;
-    align-self: end;
-    margin: 10px;
+#label {
+    display: none;
+}
+
+#sun,
+#moon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s;
+    pointer-events: none;
+    user-select: none;
 }
 
 #sun {
-    position: absolute;
-    bottom: 0px;
-    right: 1px;
     opacity: 0;
-    transition: 0.3s;
-    pointer-events: none;
-    user-select: none;
 }
 
 #moon {
-    position: absolute;
-    bottom: 0px;
-    right: 1px;
     opacity: 1;
-    transition: 0.3s;
-    pointer-events: none;
-    user-select: none;
 }
 
 .langswitch {
@@ -555,7 +566,7 @@ p {
 
     #label,
     .download2 {
-        display: block;
+        display: inline-flex;
     }
 
     #label2,
@@ -565,5 +576,176 @@ p {
 
     .experience-position {
         flex-direction: column;
+    }
+}
+
+@page {
+    size: A4;
+    margin: 12mm 14mm;
+}
+
+@media print {
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .cv {
+        display: block;
+        width: 100%;
+        background: #fff !important;
+        color: #000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .side,
+    .main {
+        width: 100%;
+        height: auto;
+    }
+
+    .langs,
+    .buttons,
+    .omitter,
+    #switch-button,
+    #switch-button2,
+    #label,
+    #label2 {
+        display: none !important;
+    }
+
+    .picture {
+        margin: 0 0 12px 0;
+        height: 110px;
+        width: 110px;
+        border-radius: 55px;
+    }
+
+    #img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .name {
+        font-size: 26px;
+    }
+
+    .location {
+        font-size: 15px;
+    }
+
+    .linedivider {
+        border-color: #bbb !important;
+        background-color: #bbb !important;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .contactinfo,
+    .education-info,
+    .language-info,
+    .skills,
+    .experiences {
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    .contactinfo-title,
+    .education-title,
+    .language-title,
+    .skills-title,
+    .experiences-title {
+        font-size: 18px;
+        margin: 6px 0 4px 0;
+    }
+
+    .contact {
+        height: auto;
+        margin-bottom: 2px;
+    }
+
+    .contact-text,
+    .contact-href {
+        font-size: 13px;
+        color: #000 !important;
+        text-decoration: none;
+    }
+
+    .contact-icon {
+        color: #555;
+    }
+
+    .education,
+    .language {
+        width: 100%;
+        margin-bottom: 8px;
+        page-break-inside: avoid;
+    }
+
+    .education-program,
+    .language-name {
+        font-size: 14px;
+    }
+
+    .education-year,
+    .education-place,
+    .language-level {
+        font-size: 11px;
+    }
+
+    .skill {
+        margin-bottom: 4px;
+        page-break-inside: avoid;
+    }
+
+    .skill-category {
+        font-size: 14px;
+    }
+
+    .skill-description {
+        font-size: 12px;
+        margin-left: 6px;
+    }
+
+    .experience {
+        margin-bottom: 8px;
+        page-break-inside: avoid;
+    }
+
+    .experience-position {
+        flex-direction: row;
+        gap: 4px;
+    }
+
+    .experience-position h3 {
+        font-size: 14px;
+    }
+
+    .experience-position > span {
+        font-size: 14px;
+    }
+
+    .experience-year {
+        font-size: 12px;
+    }
+
+    .experience-description {
+        font-size: 12px;
+        margin-top: 4px;
+        margin-left: 8px;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    a {
+        color: inherit !important;
     }
 }

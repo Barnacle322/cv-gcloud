@@ -1,6 +1,11 @@
-FROM python:3.12.2-alpine
+FROM python:3.12-slim
 
-RUN pip install Flask gunicorn --no-cache-dir
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libpango-1.0-0 \
+    libpangoft2-1.0-0 \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir Flask gunicorn weasyprint
 
 COPY src/ app/
 WORKDIR /app

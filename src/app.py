@@ -1,6 +1,10 @@
 import datetime
+import mimetypes
+import os
+from urllib.parse import urlparse
 
-from flask import Flask, render_template, send_file
+from flask import Flask, Response, render_template, request
+from weasyprint import HTML, default_url_fetcher
 
 app = Flask(__name__)
 
@@ -15,7 +19,7 @@ def get_dates():
     kasu = (today - datetime.date(2025, 4, 1)).days
     wiot = (datetime.date(2023, 12, 1) - datetime.date(2023, 6, 1)).days
 
-    dates = {
+    return {
         "bilimkana": bilimkana,
         "developstoday": developstoday,
         "eso": eso,
@@ -24,7 +28,23 @@ def get_dates():
         "kasu": kasu,
         "wiot": wiot,
     }
-    return dates
+
+
+def _static_url_fetcher(url):
+    parsed = urlparse(url)
+    if parsed.path.startswith("/static/"):
+        file_path = os.path.join(app.root_path, parsed.path.lstrip("/"))
+        if os.path.isfile(file_path):
+            mime_type = (
+                mimetypes.guess_type(file_path)[0] or "application/octet-stream"
+            )
+            with open(file_path, "rb") as f:
+                return {
+                    "string": f.read(),
+                    "mime_type": mime_type,
+                    "redirected_url": url,
+                }
+    return default_url_fetcher(url)
 
 
 @app.get("/")
@@ -34,4 +54,16 @@ def home():
 
 @app.get("/download")
 def download():
-    return send_file("./static/elements/Arstanbek_Usenov_CV.pdf", as_attachment=True)
+    html_string = render_template("home.html", dates=get_dates())
+    pdf_bytes = HTML(
+        string=html_string,
+        base_url=request.url_root,
+        url_fetcher=_static_url_fetcher,
+    ).write_pdf()
+    return Response(
+        pdf_bytes,
+        mimetype="application/pdf",
+        headers={
+            "Content-Disposition": "attachment; filename=Arstanbek_Usenov_CV.pdf"
+        },
+    )
