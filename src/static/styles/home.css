@@ -24,9 +24,7 @@
 
 :root {
     --main-bg-dark: #202124;
-    --main-bg-white: #fff;
     --secondary-bg-dark: #303134;
-    --secondary-bg-white: #f5f5f5;
     --main-font-dark: #e8eaed;
     --secondary-font-dark: #969ba1;
 }
@@ -53,11 +51,6 @@ p {
     margin: 0;
     padding: 0;
     font-size: inherit;
-}
-
-.light {
-    background-color: var(--main-bg-white);
-    transition: 0.3s;
 }
 
 ::-webkit-scrollbar {
@@ -91,12 +84,6 @@ p {
     transition: 0.3s;
 }
 
-.cv-light {
-    background-color: var(--secondary-bg-white);
-    color: var(--main-bg-dark);
-    transition: 0.3s;
-}
-
 .side {
     position: relative;
     display: flex;
@@ -112,12 +99,7 @@ p {
     flex-direction: row;
     margin: 10px;
     align-items: center;
-    gap: 4px;
-}
-
-#switch-button,
-#switch-button2 {
-    display: none;
+    justify-content: flex-end;
 }
 
 .buttons {
@@ -128,7 +110,6 @@ p {
     height: fit-content;
     justify-content: flex-end;
     margin: 10px;
-    gap: 4px;
 }
 
 .icon-btn {
@@ -153,64 +134,14 @@ p {
     background-color: rgba(255, 255, 255, 0.06);
 }
 
-.cv-light .icon-btn:hover {
-    color: var(--main-bg-dark);
-    background-color: rgba(0, 0, 0, 0.06);
-}
-
 .icon-btn .icon {
     width: 22px;
     height: 22px;
+    display: block;
 }
 
 .download2 {
-    margin-left: auto;
     display: none;
-}
-
-#label {
-    display: none;
-}
-
-#sun,
-#moon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.2s;
-    pointer-events: none;
-    user-select: none;
-}
-
-#sun {
-    opacity: 0;
-}
-
-#moon {
-    opacity: 1;
-}
-
-.langswitch {
-    color: var(--main-font-dark);
-    text-decoration: underline;
-    transition: 0.3s;
-    margin-left: 10px;
-}
-
-.langswitch-light {
-    color: var(--main-bg-dark);
-}
-
-.langswitch:hover {
-    color: var(--main-font-dark);
-    opacity: 0.7;
-    text-decoration: underline;
-}
-
-.langswitch-light:hover {
-    color: var(--main-bg-dark);
-    opacity: 0.7;
 }
 
 .picture {
@@ -254,12 +185,6 @@ p {
     border-width: 1px;
     width: calc(100% - 70px);
     margin: 15px 0px 15px 0px;
-    transition: 0.3s;
-}
-
-.linedivider-light {
-    border-color: var(--main-bg-dark);
-    background-color: var(--main-bg-dark);
     transition: 0.3s;
 }
 
@@ -313,19 +238,10 @@ p {
     text-decoration: underline;
 }
 
-.contact-href-light {
-    color: var(--main-bg-dark);
-}
-
 .contact-href:hover {
     color: var(--main-font-dark);
     opacity: 0.7;
     text-decoration: underline;
-}
-
-.contact-href-light:hover {
-    color: var(--main-bg-dark);
-    opacity: 0.7;
 }
 
 .education-info {
@@ -562,12 +478,10 @@ p {
         opacity: 1;
     }
 
-    #label,
     .download2 {
         display: inline-flex;
     }
 
-    #label2,
     .download {
         display: none;
     }
@@ -628,11 +542,7 @@ p {
 
     .langs,
     .buttons,
-    .omitter,
-    #switch-button,
-    #switch-button2,
-    #label,
-    #label2 {
+    .omitter {
         display: none !important;
     }
 
