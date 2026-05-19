@@ -434,7 +434,6 @@ p {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -470,7 +469,6 @@ p {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -581,32 +579,51 @@ p {
 
 @page {
     size: A4;
-    margin: 12mm 14mm;
+    margin: 10mm 12mm;
 }
 
 @media print {
+    html,
     body {
         background: #fff !important;
         color: #000 !important;
-        font-size: 13px;
-        line-height: 1.4;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    body {
+        font-size: 12px;
+        line-height: 1.35;
     }
 
     .cv {
-        display: block;
-        width: 100%;
+        display: block !important;
+        position: relative;
+        width: 100% !important;
+        padding: 0 0 0 32% !important;
+        margin: 0 !important;
         background: #fff !important;
         color: #000 !important;
-        margin: 0 !important;
-        padding: 0 !important;
         border-radius: 0 !important;
         box-shadow: none !important;
+        box-sizing: border-box;
     }
 
-    .side,
+    .side {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        padding-right: 12px;
+        box-sizing: border-box;
+    }
+
     .main {
+        display: block !important;
         width: 100%;
-        height: auto;
+        margin: 0;
+        padding: 0;
     }
 
     .langs,
@@ -620,39 +637,49 @@ p {
     }
 
     .picture {
-        margin: 0 0 12px 0;
-        height: 110px;
-        width: 110px;
-        border-radius: 55px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        margin: 6px 0 10px 0;
     }
 
     #img {
-        width: 110px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
     }
 
     .name {
-        font-size: 26px;
+        font-size: 19px;
     }
 
     .location {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .linedivider {
         border-color: #bbb !important;
         background-color: #bbb !important;
-        width: 100%;
-        margin: 10px 0;
+        width: calc(100% - 20px);
+        margin: 8px 0;
     }
 
     .contactinfo,
     .education-info,
-    .language-info,
+    .language-info {
+        width: calc(100% - 10px);
+    }
+
     .skills,
     .experiences {
-        width: 100%;
-        margin-top: 6px;
+        display: block;
+        width: calc(100% - 10px);
+        margin-top: 0;
+    }
+
+    .contactinfo,
+    .education-info,
+    .language-info {
+        display: block;
     }
 
     .contactinfo-title,
@@ -660,20 +687,21 @@ p {
     .language-title,
     .skills-title,
     .experiences-title {
-        font-size: 18px;
-        margin: 6px 0 4px 0;
+        font-size: 15px;
+        margin: 4px 0 4px 0;
     }
 
     .contact {
         height: auto;
-        margin-bottom: 2px;
+        margin-bottom: 3px;
     }
 
     .contact-text,
     .contact-href {
-        font-size: 13px;
+        font-size: 11px;
         color: #000 !important;
         text-decoration: none;
+        word-break: break-word;
     }
 
     .contact-icon {
@@ -682,38 +710,44 @@ p {
 
     .education,
     .language {
+        display: block;
         width: 100%;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
+        break-inside: avoid;
         page-break-inside: avoid;
     }
 
     .education-program,
     .language-name {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .education-year,
     .education-place,
     .language-level {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .skill {
+        display: block;
         margin-bottom: 4px;
+        break-inside: avoid;
         page-break-inside: avoid;
     }
 
     .skill-category {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .skill-description {
-        font-size: 12px;
-        margin-left: 6px;
+        font-size: 11px;
+        margin-left: 4px;
     }
 
     .experience {
+        display: block;
         margin-bottom: 8px;
+        break-inside: avoid;
         page-break-inside: avoid;
     }
 
@@ -723,21 +757,21 @@ p {
     }
 
     .experience-position h3 {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .experience-position > span {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .experience-year {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .experience-description {
-        font-size: 12px;
-        margin-top: 4px;
-        margin-left: 8px;
+        font-size: 11px;
+        margin-top: 3px;
+        margin-left: 6px;
     }
 
     h2,
