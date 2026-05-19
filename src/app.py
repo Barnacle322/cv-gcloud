@@ -27,7 +27,7 @@ EXPERIENCES = [
         "company": "Atlabyte",
         "start": datetime.date(2026, 1, 1),
         "end": datetime.date(2026, 4, 1),
-        "location": "Remote",
+        "location": "Bishkek",
         "bullets": [
             "Held a hybrid role spanning mentorship, engineering, and peer tutoring — supporting entry-level developers shipping into cybersecurity, e-commerce, and anti-fraud product tracks.",
             "Wired up internal tooling (CRM and team messaging integrations) into the development workflow to tighten the team's iteration cycle.",
