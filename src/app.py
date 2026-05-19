@@ -11,10 +11,34 @@ app = Flask(__name__)
 
 EXPERIENCES = [
     {
+        "title": "Full-Stack Engineer",
+        "company": "RW Community",
+        "start": datetime.date(2026, 4, 1),
+        "end": None,
+        "location": "Remote",
+        "bullets": [
+            "Architected and shipped a full-stack membership platform for a private members' club in Hong Kong with FastAPI, Vue 3 + TypeScript (PWA), and PostgreSQL — covering registration, tiered memberships, event booking, guest passes, and a points economy.",
+            "Integrated Suprema BioStar 2 biometric door access over a WireGuard VPN, syncing membership state with face, QR, NFC, and mobile credentials so physical access reflects payment and tier status in real time.",
+            "Designed a ledger-based points engine with per-batch expiry, tiered purchase bonuses, and referral rewards; shipped dual payment rails through Stripe with Celery-driven renewal reminders and reporting.",
+        ],
+    },
+    {
+        "title": "Intern Mentor & Software Engineer",
+        "company": "Atlabyte",
+        "start": datetime.date(2026, 1, 1),
+        "end": datetime.date(2026, 4, 1),
+        "location": "Bishkek",
+        "bullets": [
+            "Held a hybrid role spanning mentorship, engineering, and peer tutoring — supporting entry-level developers shipping into cybersecurity, e-commerce, and anti-fraud product tracks.",
+            "Wired up internal tooling (CRM and team messaging integrations) into the development workflow to tighten the team's iteration cycle.",
+            "Ran pairing, code reviews, and structured tutoring sessions to ramp junior engineers onto production codebases.",
+        ],
+    },
+    {
         "title": "Technology Lead",
         "company": "kasu.fun",
         "start": datetime.date(2025, 4, 1),
-        "end": None,
+        "end": datetime.date(2025, 6, 1),
         "location": "Remote",
         "bullets": [
             "Developed a Solana-based backend using Rust/Anchor and a Python client to power on-chain parimutuel betting and quiz mechanics.",
