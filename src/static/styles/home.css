@@ -640,7 +640,7 @@ p {
         height: 100px;
         width: 100px;
         border-radius: 50px;
-        margin: 6px 0 10px 0;
+        margin: 6px auto 10px;
     }
 
     #img {
