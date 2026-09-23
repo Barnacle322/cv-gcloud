@@ -1,25 +1,25 @@
 @font-face {
     font-family: "Product Sans";
     font-weight: 400;
-    src: url("/static/fonts/ProductSans-Regular.ttf");
+    src: url("../fonts/ProductSans-Regular.ttf");
 }
 
 @font-face {
     font-family: "Product Sans";
     font-weight: 200;
-    src: url("/static/fonts/ProductSans-Light.ttf");
+    src: url("../fonts/ProductSans-Light.ttf");
 }
 
 @font-face {
     font-family: "Product Sans";
     font-weight: bold;
-    src: url("/static/fonts/ProductSans-Bold.ttf");
+    src: url("../fonts/ProductSans-Bold.ttf");
 }
 
 @font-face {
     font-family: "Product Sans";
     font-weight: 900;
-    src: url("/static/fonts/ProductSans-Black.ttf");
+    src: url("../fonts/ProductSans-Black.ttf");
 }
 
 :root {
@@ -175,6 +175,36 @@ p {
     justify-content: center;
     font-weight: 400;
     font-size: 21px;
+}
+
+.headline {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 200;
+    font-size: 19px;
+    color: var(--secondary-font-dark);
+}
+
+.summary {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: calc(100% - 50px);
+}
+
+.summary-title {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 10px 0px 10px 0px;
+}
+
+.summary-text {
+    font-size: 18px;
+    font-weight: 200;
+    margin-left: 10px;
 }
 
 .linedivider {
@@ -564,6 +594,27 @@ p {
 
     .location {
         font-size: 12px;
+    }
+
+    .headline {
+        font-size: 12px;
+        color: #555;
+    }
+
+    .summary {
+        display: block;
+        width: calc(100% - 10px);
+        margin-top: 0;
+    }
+
+    .summary-title {
+        font-size: 15px;
+        margin: 4px 0 4px 0;
+    }
+
+    .summary-text {
+        font-size: 11px;
+        margin-left: 4px;
     }
 
     .linedivider {

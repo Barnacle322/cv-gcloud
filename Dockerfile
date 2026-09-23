@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libpangoft2-1.0-0 \
  && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-cache-dir Flask gunicorn weasyprint
+RUN pip install --no-cache-dir "Flask>=3" gunicorn "weasyprint>=66"
 
 COPY src/ app/
 WORKDIR /app

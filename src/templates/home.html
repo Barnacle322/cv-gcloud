@@ -120,12 +120,15 @@
                 <div class="picture">
                     <img
                         id="img"
-                        src="{{ url_for('static',filename='/elements/pfp.jpg') }}"
+                        src="{{ url_for('static',filename='elements/pfp.jpg') }}"
                         alt="myPicture"
                     />
                 </div>
-                <h1 class="name">Arstanbek Usenov</h1>
-                <span class="location">Bishkek, Kyrgyzstan</span>
+                <h1 class="name">{{ profile.name }}</h1>
+                {% if profile.headline %}
+                <span class="headline">{{ profile.headline }}</span>
+                {% endif %}
+                <span class="location">{{ profile.location }}</span>
 
                 <hr class="linedivider" />
 
@@ -188,49 +191,27 @@
 
                 <div class="education-info">
                     <h2 class="education-title">Education</h2>
+                    {% for edu in education %}
                     <div class="education">
-                        <span class="education-year">May 2023 - Jun 2023</span>
-                        <span class="education-program">Hero Training</span>
-                        <span class="education-place"
-                            >Draper University, US</span
-                        >
+                        <span class="education-year">{{ edu.years }}</span>
+                        <span class="education-program">{{ edu.program }}</span>
+                        <span class="education-place">{{ edu.place }}</span>
                     </div>
-                    <div class="education">
-                        <span class="education-year">Sep 2021 - Jul 2022</span>
-                        <span class="education-program"
-                            >Engineering Stream</span
-                        >
-                        <span class="education-place">
-                            Twente Pathway College, NL
-                        </span>
-                    </div>
-                    <div class="education">
-                        <span class="education-year">Oct 2019 - Jun 2020</span>
-                        <span class="education-program"
-                            >Java Backend Course</span
-                        >
-                        <span class="education-place">IT-Academy, KG</span>
-                    </div>
-                    <div class="education">
-                        <span class="education-year">May 2019 - Jul 2019</span>
-                        <span class="education-program"
-                            >Python Core Course</span
-                        >
-                        <span class="education-place">IT-Academy, KG</span>
-                    </div>
+                    {% endfor %}
                 </div>
 
                 <hr class="linedivider" />
 
                 <div class="language-info">
                     <h2 class="language-title">Languages</h2>
+                    {% for lang in languages %}
                     <div class="language">
-                        <p class="language-name">English</p>
-                        <p class="language-level">Advanced(C1) - IELTS 8.0</p>
+                        <p class="language-name">{{ lang.name }}</p>
+                        {% if lang.level %}
+                        <p class="language-level">{{ lang.level }}</p>
+                        {% endif %}
                     </div>
-                    <div class="language">
-                        <p class="language-name">Russian</p>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
 
@@ -259,72 +240,21 @@
                         </svg>
                     </a>
                 </div>
+                {% if profile.summary %}
+                <div class="summary">
+                    <h2 class="summary-title">Summary</h2>
+                    <p class="summary-text">{{ profile.summary }}</p>
+                </div>
+                <hr class="linedivider" />
+                {% endif %}
                 <div class="skills">
                     <h2 class="skills-title">Skills</h2>
-
+                    {% for skill in skills %}
                     <div class="skill">
-                        <h3 class="skill-category">Programming Languages</h3>
-                        <p class="skill-description">
-                            Python, JavaScript, Java, SQL, Rust
-                        </p>
+                        <h3 class="skill-category">{{ skill.category }}</h3>
+                        <p class="skill-description">{{ skill.text }}</p>
                     </div>
-
-                    <div class="skill">
-                        <h3 class="skill-category">Frameworks</h3>
-                        <p class="skill-description">
-                            Flask, FastAPI, Django, React, Vue.js, pinia,
-                            TailwindCSS, Express, Python-Telegram-Bot
-                        </p>
-                    </div>
-
-                    <div class="skill">
-                        <h3 class="skill-category">Libraries</h3>
-                        <p class="skill-description">
-                            SQLAlchemy, Pydantic, Celery, authlib, alembic,
-                            pytest, asyncio, httpx, Pillow, uv, Poetry,
-                            Selenium, Babel
-                        </p>
-                    </div>
-
-                    <div class="skill">
-                        <h3 class="skill-category">Tools</h3>
-                        <p class="skill-description">
-                            Git, pgModeler, Postman, DBeaver
-                        </p>
-                    </div>
-
-                    <div class="skill">
-                        <h3 class="skill-category">Web3 / Blockchain</h3>
-                        <p class="skill-description">
-                            Solana, Anchor, Web3.py, Ethers.js, Viem,
-                            MetaMask SDK, Privy
-                        </p>
-                    </div>
-
-                    <div class="skill">
-                        <h3 class="skill-category">Infrastructure</h3>
-                        <p class="skill-description">
-                            Docker, Google Cloud, AWS, DigitalOcean, Hetzner,
-                            Cloudflare, Coolify, Dokploy
-                        </p>
-                    </div>
-
-                    <div class="skill">
-                        <h3 class="skill-category">Technologies</h3>
-                        <p class="skill-description">
-                            Redis, Typesense, Algolia, Meilisearch, Supabase,
-                            Google Gemini, Stripe, Polar, SendGrid, Sentry,
-                            Doppler, Posthog, Google Analytics
-                        </p>
-                    </div>
-
-                    <div class="skill">
-                        <h3 class="skill-category">Creative</h3>
-                        <p class="skill-description">
-                            Figma, Premiere Pro, Photoshop, Lightroom, Audition,
-                            DaVinci Resolve, Canva, Mixxx, MuseScore
-                        </p>
-                    </div>
+                    {% endfor %}
                 </div>
                 <hr class="linedivider" />
                 <div class="experiences">
@@ -337,9 +267,11 @@
                         </span>
                         <span class="experience-year">
                             {{ exp.date_range }}
+                            {% if show_days %}
                             <span style="color: #969ba1">
                                 ({{ exp.days }} days)
                             </span>
+                            {% endif %}
                             // {{ exp.location }}
                         </span>
                         {% for bullet in exp.bullets %}

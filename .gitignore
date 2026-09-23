@@ -133,3 +133,6 @@ dmypy.json
 start.ps1
 
 .DS_STORE
+.DS_Store
+out/
+

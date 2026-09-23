@@ -1,0 +1,30 @@
+{
+  "headline": "Coding Instructor & Mentor · Full-Stack Developer",
+  "summary": "Developer and educator: taught web development to grades 9–10, mentored 25+ children aged 8–11 with Scratch, and ramped junior engineers through pairing and code review. Five years of production Python/JavaScript work behind the teaching. BCIT student in Vancouver, available part-time.",
+  "experiences": [
+    "rw",
+    "atlabyte",
+    "globalify",
+    "cec",
+    "bilimkana"
+  ],
+  "skills": [
+    {
+      "category": "Teaching",
+      "text": "Curriculum design, workshops, 1:1 tutoring, pairing and code review, Scratch (ages 8–11), web development (grades 9–10), adult mentoring"
+    },
+    {
+      "category": "Programming Languages",
+      "text": "Python, JavaScript, TypeScript, Java, SQL, Rust"
+    },
+    {
+      "category": "Frameworks",
+      "text": "Flask, FastAPI, Django, Vue.js, React, TailwindCSS"
+    },
+    {
+      "category": "Tools",
+      "text": "Git, GitHub Actions, Docker, Postman, DBeaver, Figma"
+    }
+  ],
+  "filename": "Arstanbek_Usenov_Resume_Teaching.pdf"
+}
