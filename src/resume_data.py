@@ -14,7 +14,7 @@ PROFILE = {
     "headline": None,  # optional line under the name, e.g. "Full-Stack Developer"
     "summary": None,  # optional paragraph at the top of the main column
     "email": "arstan.usenov@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/arstanbek-usenov-a68a78225/",
+    "linkedin": "https://www.linkedin.com/in/arstanbek-usenov/",
     "telegram": "https://t.me/Barnacle/",
 }
 
