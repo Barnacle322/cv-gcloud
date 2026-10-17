@@ -18,8 +18,9 @@ Output lands next to the JSON unless `-o` is given.
 | `headline` | one line under the name (e.g. `Full-Stack Developer · BCIT CIT student`) |
 | `summary` | short paragraph at the top of the main column |
 | `location` | overrides `Vancouver, BC` |
+| `work_status` | overrides `Eligible to work in Canada` |
 | `skills` | full replacement list of `{category, text}` |
-| `experiences` | ordered list; each item is an id string or `{id, title?, bullets?, extra_bullets?}`. Ids not listed are omitted. Ids: `rw atlabyte kasu globalify wiot cec bilimkana developstoday eso` |
+| `experiences` | ordered list; each item is an id string or `{id, title?, bullets?, extra_bullets?}`. Ids not listed are omitted. Ids: `rw halftone polytech atlabyte kasu globalify wiot teaching cec bilimkana earlier developstoday eso` (`teaching` and `earlier` group the short roles; the public page uses `SITE_EXPERIENCES`) |
 | `education` | full replacement list of `{years, program, place}` |
 | `show_days` | show the `(N days)` counter (default off for variants) |
 | `filename` | output PDF name |

@@ -13,9 +13,9 @@ Full-stack Software Developer with about 5 years of professional experience in P
 ## Experience
 
 **Full-Stack Developer** | RW Community, Remote (Hong Kong client) | April 2026 – Present
-- Architected and shipped a membership platform for a private members' club (FastAPI, Vue 3 + TypeScript PWA, PostgreSQL) covering registration, tiered memberships, event booking, and guest passes.
-- Integrated Suprema BioStar 2 biometric access over a WireGuard VPN. Face, QR, NFC, and mobile credentials stay synced with membership state, so door access follows payment and tier status in real time.
-- Designed a ledger-based points engine with per-batch expiry, tiered purchase bonuses, and referral rewards.
+- Architected and shipped a private members' club platform (FastAPI, Vue 3 + TypeScript PWA, PostgreSQL): registration, tiered memberships, event booking, guest passes.
+- Integrated Suprema BioStar 2 biometric access over WireGuard, syncing face, QR, NFC, and mobile credentials so door access follows payment and tier status in real time.
+- Designed a ledger-based points engine: per-batch expiry, tiered purchase bonuses, referral rewards.
 - Built Stripe payments with Celery-scheduled renewal reminders and reporting.
 
 **Co-founder & Software Developer** | Halftone, Vancouver, BC | [Month YYYY] – Present
@@ -27,7 +27,7 @@ Full-stack Software Developer with about 5 years of professional experience in P
 - Built a warehouse management system for tracking equipment stock across the company's installation projects.
 
 **Tech Lead** | kasu.fun, Remote | April 2025 – June 2025
-- Built Solana on-chain programs in Rust/Anchor, plus a Python client, for parimutuel betting and quiz mechanics.
+- Built Solana programs in Rust/Anchor plus a Python client for on-chain parimutuel betting and quizzes.
 - Shipped the web app (Flask API, Vue.js frontend) for quiz creation, participation, and leaderboards, with automated social media posting and AI-generated images.
 
 **Tech Lead** | Globalify, Remote | June 2023 – June 2025
@@ -35,7 +35,7 @@ Full-stack Software Developer with about 5 years of professional experience in P
 - Designed and built the first of these products and set up the deployment infrastructure for both.
 
 **Founding Engineer** | WIoT Technologies, Bishkek | June 2023 – December 2023
-- Built WIoT's IoT platform end-to-end. It collects, monitors, and visualizes device data for businesses and homes across a city-wide network in Bishkek.
+- Built WIoT's IoT platform end-to-end, collecting and visualizing device data for businesses and homes across a city-wide network in Bishkek.
 - Integrated diverse IoT devices and communication protocols into a single platform for real-time monitoring and centralized management.
 
 **Teaching & Mentoring** | Bishkek, Kyrgyzstan | September 2022 – April 2026

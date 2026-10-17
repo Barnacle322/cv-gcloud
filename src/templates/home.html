@@ -129,6 +129,9 @@
                 <span class="headline">{{ profile.headline }}</span>
                 {% endif %}
                 <span class="location">{{ profile.location }}</span>
+                {% if profile.work_status %}
+                <span class="location">{{ profile.work_status }}</span>
+                {% endif %}
 
                 <hr class="linedivider" />
 
@@ -263,16 +266,18 @@
                     <div class="experience">
                         <span class="experience-position">
                             <h3>{{ exp.title }}</h3>
+                            {% if exp.company %}
                             <span>@ {{ exp.company }}</span>
+                            {% endif %}
                         </span>
                         <span class="experience-year">
                             {{ exp.date_range }}
-                            {% if show_days %}
+                            {% if show_days and exp.days is not none %}
                             <span style="color: #969ba1">
                                 ({{ exp.days }} days)
                             </span>
                             {% endif %}
-                            // {{ exp.location }}
+                            {% if exp.location %}// {{ exp.location }}{% endif %}
                         </span>
                         {% for bullet in exp.bullets %}
                         <p class="experience-description">- {{ bullet }}</p>
@@ -280,31 +285,6 @@
                     </div>
                     {% endfor %}
                 </div>
-                <!-- <hr class="linedivider" />
-                <div class="projects">
-                    <h2 class="projects-title">Projects</h2>
-                    <div class="project">
-                        <h3 class="project-name">
-                            Student House Grocery Management System
-                        </h3>
-                        <p class="project-description">
-                            A web app built with
-                            <b>Flask</b> and <b>PostgreSQL</b> for keeping track
-                            of the budget in a student house.
-                        </p>
-                    </div>
-                    <div class="project">
-                        <h3 class="project-name">Event Registration System</h3>
-                        <p class="project-description">
-                            A CRM system for an easy event registation and
-                            creation. It's built with
-                            <b>Django</b> and
-                            <b>Python-Telegram-Bot</b>
-                            and features interfaces through a web view and a
-                            telegram bot.
-                        </p>
-                    </div>
-                </div> -->
             </div>
         </main>
     </body>

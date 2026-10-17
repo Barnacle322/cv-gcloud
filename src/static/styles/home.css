@@ -523,7 +523,7 @@ p {
 
 @page {
     size: A4;
-    margin: 10mm 12mm;
+    margin: 8mm 10mm;
 }
 
 @media print {
@@ -537,7 +537,7 @@ p {
 
     body {
         font-size: 12px;
-        line-height: 1.35;
+        line-height: 1.25;
     }
 
     .cv {
@@ -609,7 +609,7 @@ p {
 
     .summary-title {
         font-size: 15px;
-        margin: 4px 0 4px 0;
+        margin: 2px 0 3px 0;
     }
 
     .summary-text {
@@ -621,7 +621,7 @@ p {
         border-color: #bbb !important;
         background-color: #bbb !important;
         width: calc(100% - 20px);
-        margin: 8px 0;
+        margin: 5px 0;
     }
 
     .contactinfo,
@@ -649,7 +649,7 @@ p {
     .skills-title,
     .experiences-title {
         font-size: 15px;
-        margin: 4px 0 4px 0;
+        margin: 2px 0 3px 0;
     }
 
     .contact {
@@ -691,23 +691,29 @@ p {
 
     .skill {
         display: block;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
         break-inside: avoid;
         page-break-inside: avoid;
     }
 
     .skill-category {
-        font-size: 13px;
+        display: inline;
+        font-size: 11px;
+    }
+
+    .skill-category::after {
+        content: ":";
     }
 
     .skill-description {
+        display: inline;
         font-size: 11px;
-        margin-left: 4px;
+        margin-left: 2px;
     }
 
     .experience {
         display: block;
-        margin-bottom: 8px;
+        margin-bottom: 5px;
         break-inside: avoid;
         page-break-inside: avoid;
     }
@@ -731,7 +737,7 @@ p {
 
     .experience-description {
         font-size: 11px;
-        margin-top: 3px;
+        margin-top: 1px;
         margin-left: 6px;
     }
 

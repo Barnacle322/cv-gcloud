@@ -11,8 +11,13 @@ import datetime
 PROFILE = {
     "name": "Arstanbek Usenov",
     "location": "Vancouver, BC",
-    "headline": None,  # optional line under the name, e.g. "Full-Stack Developer"
-    "summary": None,  # optional paragraph at the top of the main column
+    "headline": "Software Developer",
+    "work_status": "Eligible to work in Canada",
+    "summary": "Full-stack Software Developer with about 5 years of professional "
+    "experience in Python and TypeScript. Shipped production platforms "
+    "end-to-end, from data model and API through frontend, payments, and "
+    "deployment, for clients in Hong Kong, Kyrgyzstan, and the Netherlands. "
+    "Starting the BCIT Computer Information Technology diploma (graduating 2028).",
     "email": "arstan.usenov@gmail.com",
     "linkedin": "https://www.linkedin.com/in/arstanbek-usenov/",
     "telegram": "https://t.me/Barnacle/",
@@ -20,147 +25,146 @@ PROFILE = {
 
 EDUCATION = [
     {
-        "years": "Sep 2026 - May 2028",
+        "years": "September 2026 - May 2028 (expected)",
         "program": "Computer Information Technology Diploma",
-        "place": "BCIT, Vancouver, CA",
+        "place": "British Columbia Institute of Technology (BCIT)",
     },
     {
-        "years": "May 2023 - Jun 2023",
-        "program": "Hero Training",
-        "place": "Draper University, US",
-    },
-    {
-        "years": "Sep 2021 - Jul 2022",
+        "years": "September 2021 - July 2022",
         "program": "Engineering Stream",
-        "place": "Twente Pathway College, NL",
-    },
-    {
-        "years": "Oct 2019 - Jun 2020",
-        "program": "Java Backend Course",
-        "place": "IT-Academy, KG",
-    },
-    {
-        "years": "May 2019 - Jul 2019",
-        "program": "Python Core Course",
-        "place": "IT-Academy, KG",
+        "place": "Twente Pathway College, Netherlands",
     },
 ]
 
 LANGUAGES = [
-    {"name": "English", "level": "Advanced(C1) - IELTS 8.0"},
-    {"name": "Russian", "level": None},
+    {"name": "English", "level": "Professional - IELTS 8.0 (CLB 10)"},
+    {"name": "Russian", "level": "Native"},
 ]
 
 SKILLS = [
+    {"category": "Languages", "text": "Python, TypeScript, JavaScript, SQL, Rust"},
     {
-        "category": "Programming Languages",
-        "text": "Python, JavaScript, TypeScript, Java, SQL, Rust",
+        "category": "Backend",
+        "text": "FastAPI, Flask, Django, SQLAlchemy, Celery, pytest, REST APIs",
     },
+    {"category": "Frontend", "text": "Vue 3, React, Tailwind CSS, Figma"},
     {
-        "category": "Frameworks",
-        "text": "Flask, FastAPI, Django, React, Vue.js, pinia, TailwindCSS, "
-        "Express, Python-Telegram-Bot",
+        "category": "Data & Infra",
+        "text": "PostgreSQL, Redis, Docker, GitHub Actions, AWS, Google Cloud",
     },
-    {
-        "category": "Libraries",
-        "text": "SQLAlchemy, Pydantic, Celery, authlib, alembic, pytest, "
-        "asyncio, httpx, Pillow, uv, Poetry, Selenium, Babel",
-    },
-    {
-        "category": "APIs & Auth",
-        "text": "REST, GraphQL, JWT, OAuth2, WebSockets",
-    },
-    {
-        "category": "Tools",
-        "text": "Git, GitHub Actions, pgModeler, Postman, DBeaver",
-    },
-    {
-        "category": "Web3 / Blockchain",
-        "text": "Solana, Anchor, Web3.py, Ethers.js, Viem, MetaMask SDK, Privy",
-    },
-    {
-        "category": "Infrastructure",
-        "text": "Docker, CI/CD, Google Cloud, AWS, DigitalOcean, Hetzner, "
-        "Cloudflare, Coolify, Dokploy",
-    },
-    {
-        "category": "Technologies",
-        "text": "PostgreSQL, Redis, Typesense, Algolia, Meilisearch, Supabase, "
-        "Google Gemini, Stripe, Polar, Twilio, SendGrid, Resend, Mailchimp, "
-        "Sentry, Doppler, Posthog, Google Analytics",
-    },
-    {
-        "category": "Creative",
-        "text": "Figma, Premiere Pro, Photoshop, Lightroom, Audition, "
-        "DaVinci Resolve, Canva, Mixxx, MuseScore",
-    },
+    {"category": "Tooling", "text": "Git, Stripe, Sentry, Postman"},
+]
+
+# Entries shown on the public page, in order. Variants pick their own ids and
+# can also use the individual roles that "teaching" and "earlier" summarize.
+SITE_EXPERIENCES = [
+    "rw",
+    "halftone",
+    "polytech",
+    "kasu",
+    "globalify",
+    "wiot",
+    "teaching",
+    "earlier",
 ]
 
 EXPERIENCES = [
     {
         "id": "rw",
-        "title": "Full-Stack Engineer",
+        "title": "Full-Stack Developer",
         "company": "RW Community",
         "start": datetime.date(2026, 4, 1),
         "end": None,
-        "end_note": "platform shipped; ongoing maintenance",
-        "location": "Remote",
+        "location": "Remote (Hong Kong client)",
         "bullets": [
-            "Architected and shipped a full-stack membership platform for a private members' club in Hong Kong with FastAPI, Vue 3 + TypeScript (PWA), and PostgreSQL — covering registration, tiered memberships, event booking, guest passes, and a points economy.",
-            "Integrated Suprema BioStar 2 biometric door access over a WireGuard VPN, syncing membership state with face, QR, NFC, and mobile credentials so physical access reflects payment and tier status in real time.",
-            "Designed a ledger-based points engine with per-batch expiry, tiered purchase bonuses, and referral rewards; shipped dual payment rails through Stripe with Celery-driven renewal reminders and reporting.",
+            "Architected and shipped a private members' club platform (FastAPI, Vue 3 + TypeScript PWA, PostgreSQL): registration, tiered memberships, event booking, guest passes.",
+            "Integrated Suprema BioStar 2 biometric access over WireGuard, syncing face, QR, NFC, and mobile credentials so door access follows payment and tier status in real time.",
+            "Designed a ledger-based points engine: per-batch expiry, tiered purchase bonuses, referral rewards.",
+            "Built Stripe payments with Celery-scheduled renewal reminders and reporting.",
+        ],
+    },
+    {
+        "id": "halftone",
+        "title": "Co-founder & Software Developer",
+        "company": "Halftone",
+        "start": None,  # TODO: start date
+        "end": None,
+        "location": "Vancouver, BC",
+        "bullets": [
+            "Co-founded a two-person product design and engineering studio that handles full-cycle builds for startups, from product design through engineering and launch.",
+        ],
+    },
+    {
+        "id": "polytech",
+        "title": "Software Developer (Contract)",
+        "company": "Polytechnology LTD",
+        "start": None,  # TODO: start date
+        "end": None,
+        "location": "Bishkek (Remote)",
+        "bullets": [
+            "Built the building management system for IVOX, the company's AV and climate systems product line, used to monitor and control equipment installed in client buildings.",
+            "Developed the IVOX digital signage and hotel TV platform, which manages content on lobby and in-room displays.",
+            "Built a warehouse management system for tracking equipment stock across the company's installation projects.",
         ],
     },
     {
         "id": "atlabyte",
-        "title": "Intern Mentor & Software Engineer",
+        "title": "Intern Mentor",
         "company": "Atlabyte",
         "start": datetime.date(2026, 1, 1),
         "end": datetime.date(2026, 4, 1),
         "location": "Bishkek",
         "bullets": [
-            "Held a hybrid role spanning mentorship, engineering, and peer tutoring — supporting entry-level developers shipping into cybersecurity, e-commerce, and anti-fraud product tracks.",
-            "Wired up internal tooling (CRM and team messaging integrations) into the development workflow to tighten the team's iteration cycle.",
-            "Ran pairing, code reviews, and structured tutoring sessions to ramp junior engineers onto production codebases.",
+            "Ran pairing sessions and code reviews to get junior developers onto production codebases in cybersecurity, e-commerce, and anti-fraud tracks.",
         ],
     },
     {
         "id": "kasu",
-        "title": "Technology Lead",
+        "title": "Tech Lead",
         "company": "kasu.fun",
         "start": datetime.date(2025, 4, 1),
         "end": datetime.date(2025, 6, 1),
         "location": "Remote",
         "bullets": [
-            "Developed a Solana-based backend using Rust/Anchor and a Python client to power on-chain parimutuel betting and quiz mechanics.",
-            "Built a full-stack web application with Python (Flask) APIs and a Vue.js frontend to enable quiz creation, participation, and leaderboard functionality.",
-            "Integrated AI-driven components and external services (e.g., social media posting, dynamic image generation) to enhance user engagement and automate key workflows.",
+            "Built Solana programs in Rust/Anchor plus a Python client for on-chain parimutuel betting and quizzes.",
+            "Shipped the web app (Flask API, Vue.js frontend) for quiz creation, participation, and leaderboards, with automated social media posting and AI-generated images.",
         ],
     },
     {
         "id": "globalify",
-        "title": "Chief Technology Officer",
+        "title": "Tech Lead",
         "company": "Globalify",
         "start": datetime.date(2023, 6, 1),
         "end": datetime.date(2025, 6, 1),
         "location": "Remote",
         "bullets": [
-            "Designed and engineered a new SaaS product to commence the company's expansion into the global market.",
-            "Directed a 5-member team, delivering 2 new SaaS products allowing the company to expand into new markets.",
-            "Established a deployment infrastructure designed to cut deployment time by 50% and increase the reliability of the system.",
+            "Led a 5-person engineering team that delivered two new SaaS products for the company's expansion into new markets.",
+            "Designed and built the first of these products and set up the deployment infrastructure for both.",
         ],
     },
     {
         "id": "wiot",
-        "title": "Chief Technology Officer",
+        "title": "Founding Engineer",
         "company": "WIoT Technologies",
         "start": datetime.date(2023, 6, 1),
         "end": datetime.date(2023, 12, 1),
         "location": "Bishkek",
         "bullets": [
-            "Led the end-to-end development and deployment of WIOT's unified IoT platform, architecting a scalable infrastructure that aggregates and visualizes device data for businesses and homes in Bishkek.",
-            "Designed and implemented robust integrations with diverse IoT devices and communication protocols, ensuring seamless data collection, real-time monitoring, and centralized management for end users.",
-            "Directed full-stack engineering efforts, optimizing cloud-based services and platform features to deliver high-level overviews, analytics, and actionable insights across a city-wide network of connected devices.",
+            "Built WIoT's IoT platform end-to-end, collecting and visualizing device data for businesses and homes across a city-wide network in Bishkek.",
+            "Integrated diverse IoT devices and communication protocols into a single platform for real-time monitoring and centralized management.",
+        ],
+    },
+    {
+        "id": "teaching",
+        "title": "Teaching & Mentoring",
+        "company": None,
+        "start": datetime.date(2022, 9, 1),
+        "end": datetime.date(2026, 4, 1),
+        "location": "Bishkek, Kyrgyzstan",
+        "bullets": [
+            "Intern Mentor, Atlabyte (January 2026 - April 2026): ran pairing sessions and code reviews to get junior developers onto production codebases in cybersecurity, e-commerce, and anti-fraud tracks.",
+            "Course Mentor, CEC AUCA (March 2023 - July 2023): mentored 25+ students through programming course projects.",
+            "Web Development Teacher, Bilimkana-Bishkek (September 2022 - June 2023): designed and taught a web development curriculum, with workshops and project assessments.",
         ],
     },
     {
@@ -171,45 +175,52 @@ EXPERIENCES = [
         "end": datetime.date(2023, 7, 1),
         "location": "Kyrgyzstan",
         "bullets": [
-            "Mentored over 25 students, breaking down complex problems, leading to a 95% in student project completion rates.",
-            "Introduced innovative coding exercises that improved creative thinking and problem-solving skills.",
+            "Mentored 25+ students through programming course projects.",
         ],
     },
     {
         "id": "bilimkana",
-        "title": "Teacher",
+        "title": "Web Development Teacher",
         "company": "Bilimkana-Bishkek",
         "start": datetime.date(2022, 9, 1),
         "end": datetime.date(2023, 6, 1),
         "location": "Kyrgyzstan",
         "bullets": [
-            "Developed and implemented a dynamic web development curriculum, improving student engagement and understanding, with a 20% increase in final project submissions.",
-            "Conducted regular assessments, adjusting teaching methods to improve learning outcomes by 70%.",
-            "Led coding workshops and interactive sessions, resulting in a 25% improvement in student engagement.",
+            "Designed and taught a web development curriculum, with workshops and project assessments.",
+        ],
+    },
+    {
+        "id": "earlier",
+        "title": "Earlier Roles",
+        "company": None,
+        "start": datetime.date(2021, 9, 1),
+        "end": datetime.date(2023, 2, 1),
+        "location": None,
+        "bullets": [
+            "Python Developer, DevelopsToday, Remote (August 2022 - February 2023): maintained asynchronous Python backend services and shipped user-facing features.",
+            "Software Developer, ESO Association, Netherlands (September 2021 - August 2022): built a shared platform used by the association's 5 internal committees.",
         ],
     },
     {
         "id": "developstoday",
         "title": "Python Developer",
         "company": "DevelopsToday",
-        "start": datetime.date(2022, 8, 8),
+        "start": datetime.date(2022, 8, 1),
         "end": datetime.date(2023, 2, 1),
-        "location": "Ukraine (Remote)",
+        "location": "Remote",
         "bullets": [
-            "Maintained scalable, asynchronous systems, increasing the project's performance.",
-            "Worked on crucial features that improved the user experience.",
+            "Maintained asynchronous Python backend services and shipped user-facing features.",
         ],
     },
     {
         "id": "eso",
-        "title": "Software Engineer",
+        "title": "Software Developer",
         "company": "ESO Association",
-        "start": datetime.date(2021, 9, 14),
-        "end": datetime.date(2022, 8, 8),
+        "start": datetime.date(2021, 9, 1),
+        "end": datetime.date(2022, 8, 1),
         "location": "The Netherlands",
         "bullets": [
-            "Developed modular, reusable code across multiple projects, reducing project delivery times by 20%.",
-            "Collaborated with 5 internal committees, introducing a brand new platform that increased Association's engagement by 80%.",
+            "Built a shared platform used by the association's 5 internal committees.",
         ],
     },
 ]
@@ -220,8 +231,11 @@ def _enrich(exp, today):
     end_label = end.strftime("%B %Y") if end else "Present"
     if exp.get("end_note"):
         end_label += " ({})".format(exp["end_note"])
-    date_range = "{} - {}".format(exp["start"].strftime("%B %Y"), end_label)
-    days = ((end or today) - exp["start"]).days
+    if exp["start"]:
+        date_range = "{} - {}".format(exp["start"].strftime("%B %Y"), end_label)
+        days = ((end or today) - exp["start"]).days
+    else:
+        date_range, days = end_label, None
     return {**exp, "date_range": date_range, "days": days}
 
 
@@ -247,20 +261,20 @@ def _apply_experience_variant(base, spec):
 
 def build_context(variant=None, today=None):
     """Return the template context. `variant` keys (all optional):
-    headline, summary, location, skills (full list of {category, text}),
+    headline, summary, location, work_status, skills (full list of {category, text}),
     experiences (see _apply_experience_variant), education (full list),
-    show_days (bool, default False for variants), filename (PDF name)."""
+    show_days (bool, default False), filename (PDF name)."""
     variant = variant or {}
     today = today or datetime.date.today()
 
     profile = dict(PROFILE)
-    for key in ("headline", "summary", "location"):
+    for key in ("headline", "summary", "location", "work_status"):
         if key in variant:
             profile[key] = variant[key]
 
-    experiences = EXPERIENCES
-    if "experiences" in variant:
-        experiences = _apply_experience_variant(EXPERIENCES, variant["experiences"])
+    experiences = _apply_experience_variant(
+        EXPERIENCES, variant.get("experiences", SITE_EXPERIENCES)
+    )
 
     return {
         "profile": profile,
@@ -268,5 +282,5 @@ def build_context(variant=None, today=None):
         "languages": LANGUAGES,
         "skills": variant.get("skills", SKILLS),
         "experiences": [_enrich(e, today) for e in experiences],
-        "show_days": variant.get("show_days", not variant),
+        "show_days": variant.get("show_days", False),
     }
